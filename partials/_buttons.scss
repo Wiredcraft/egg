@@ -1,0 +1,16 @@
+.button {
+  @include button();
+  @include font-size($smaller);
+  text-align: center;
+  &.secondary {
+    @include button($background, true);
+  }
+}
+
+.bundle .button {
+  @include bundle;
+  &.primary,
+  &.secondary {
+    @include bundle;
+  }
+}

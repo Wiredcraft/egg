@@ -499,8 +499,7 @@ body {
   color: #333;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: normal;
-  position: relative;
-  text-align: center; }
+  position: relative; }
 
 a {
   cursor: pointer;
@@ -563,9 +562,9 @@ small {
   font-size: 1.2rem; }
 
 .button {
-  background: #1F8DD6;
+  background: #EEE;
   border-radius: 2px;
-  color: #FFF;
+  color: inherit;
   display: inline-block;
   outline: none;
   padding: 4px 20px;
@@ -575,26 +574,52 @@ small {
   -webkit-transition-duration: 0.1s;
   -moz-transition-duration: 0.1s;
   transition-duration: 0.1s;
-  border: 1px solid #1c7fc1;
+  border: 1px solid #d6d6d6;
   font-size: 14px;
   font-size: 1.4rem;
   text-align: center; }
   .button:hover, .button:focus {
-    background: #3598da;
-    color: #FFF;
+    background: #e2e2e2;
+    color: inherit;
     text-decoration: none; }
   .button:active, .button.active {
-    background: #1c7fc1;
-    color: #FFF;
+    background: #fcfcfc;
+    color: inherit;
     text-decoration: none; }
   .button[disabled=disabled], .button[disabled=true], .button[disabled] {
     background: #fbfbfb;
     border-color: #e2e2e2;
     color: #858585; }
+  .button.primary {
+    background: #1F8DD6;
+    border-radius: 2px;
+    color: #FFF;
+    display: inline-block;
+    outline: none;
+    padding: 4px 20px;
+    -webkit-transition-property: background, border, color;
+    -moz-transition-property: background, border, color;
+    transition-property: background, border, color;
+    -webkit-transition-duration: 0.1s;
+    -moz-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    border: 1px solid #1c7fc1; }
+    .button.primary:hover, .button.primary:focus {
+      background: #3598da;
+      color: #FFF;
+      text-decoration: none; }
+    .button.primary:active, .button.primary.active {
+      background: #1c7fc1;
+      color: #FFF;
+      text-decoration: none; }
+    .button.primary[disabled=disabled], .button.primary[disabled=true], .button.primary[disabled] {
+      background: #fbfbfb;
+      border-color: #e2e2e2;
+      color: #858585; }
   .button.secondary {
     background: #50CD84;
     border-radius: 2px;
-    color: inherit;
+    color: #FFF;
     display: inline-block;
     outline: none;
     padding: 4px 20px;
@@ -606,12 +631,12 @@ small {
     transition-duration: 0.1s;
     border: 1px solid #48b977; }
     .button.secondary:hover, .button.secondary:focus {
-      background: #4cc37d;
-      color: inherit;
+      background: #62d290;
+      color: #FFF;
       text-decoration: none; }
     .button.secondary:active, .button.secondary.active {
-      background: #dcf5e6;
-      color: inherit;
+      background: #48b977;
+      color: #FFF;
       text-decoration: none; }
     .button.secondary[disabled=disabled], .button.secondary[disabled=true], .button.secondary[disabled] {
       background: #fbfbfb;
@@ -963,3 +988,55 @@ table {
     transition-duration: 0.2s; }
     table tbody tr:last-child {
       border-bottom: 1px solid #DDD; }
+
+.tooltip {
+  position: relative; }
+  .tooltip span {
+    background: #333;
+    border-radius: 2px;
+    color: #FFF;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 140%;
+    opacity: 0;
+    padding: 7.5px 15px;
+    position: absolute;
+    text-align: center;
+    visibility: hidden;
+    white-space: nowrap;
+    width: auto;
+    z-index: 999; }
+  .tooltip:hover span {
+    opacity: 1;
+    -webkit-transition-property: opacity, margin;
+    -moz-transition-property: opacity, margin;
+    transition-property: opacity, margin;
+    -webkit-transition-duration: 0.1s;
+    -moz-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    visibility: visible; }
+  .tooltip span {
+    bottom: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    .tooltip span:after {
+      content: '';
+      position: absolute;
+      border-right: 5px solid transparent;
+      border-bottom-color: #333;
+      border-top: 5px solid #333;
+      border-left: 5px solid transparent;
+      bottom: -5px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%); }
+  .tooltip:hover span {
+    margin-bottom: 8px; }

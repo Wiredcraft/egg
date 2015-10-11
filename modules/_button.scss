@@ -1,4 +1,4 @@
-@mixin button($color: $blue, $clear: false, $border: true) {
+@mixin button($color: $light, $clear: true, $border: true) {
   background: $color;
   border-radius: $radius;
   @if $clear == true {

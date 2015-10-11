@@ -7,9 +7,13 @@ $orange: #FF8859 !default;
 $red: #FF5F5F !default;
 $purple: #8B66CB !default;
 $black: #333 !default;
-$line: #DDD !default;
 $grey: #CCC !default;
+
+$primary: $blue !default;
+$secondary: $green !default;
+$line: #DDD !default;
 $light: #EEE !default;
+$background: $light !default;
 
 /* Sizes */
 
@@ -22,15 +26,16 @@ $larger: 18 !default;
 $large: 24 !default;
 $huge: 32 !default;
 $gigantic: 48 !default;
+$humongous: 64 !default;
 
 /* Fonts */
 
 $sans: Arial, 'Helvetica Neue', Helvetica, sans-serif !default;
-$code: 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+$code: 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace !default;
 
 /* Misc */
 
-$ease: 0.2s;
+$ease: 0.2s !default;
 $gutter: 20px !default;
 $radius: 2px !default;
-$shadow: rgba(0, 0, 0, 0.1) 0 1px 0 0;
+$shadow: rgba(0, 0, 0, 0.1) 0 1px 0 0 !default;

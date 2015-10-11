@@ -28,7 +28,7 @@
       left: 50%;
       @include transform(translateX(-50%));
       &:after {
-        @include arrow(bottom);
+        @include arrow(bottom, $color);
       }
     }
     &:hover span {
@@ -41,7 +41,7 @@
       left: 50%;
       @include transform(translateX(-50%));
       &:after {
-        @include arrow(top);
+        @include arrow(top, $color);
       }
     }
     &:hover span {
@@ -54,7 +54,7 @@
       top: 50%;
       @include transform(translateY(-50%));
       &:after {
-        @include arrow(right);
+        @include arrow(right, $color);
       }
     }
     &:hover span {
@@ -67,7 +67,7 @@
       top: 50%;
       @include transform(translateY(-50%));
       &:after {
-        @include arrow(left);
+        @include arrow(left, $color);
       }
     }
     &:hover span {

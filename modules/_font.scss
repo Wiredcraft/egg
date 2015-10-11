@@ -8,6 +8,6 @@ html {
 }
 
 body {
-  @include font-size();
+  font-size: $normal + px; // Because of Chrome bug (see https://code.google.com/p/chromium/issues/detail?id=319623)
   line-height: 140%;
 }

@@ -1,9 +1,9 @@
 .button {
-  @include button();
+  @include button($primary);
   @include font-size($smaller);
   text-align: center;
   &.secondary {
-    @include button($background, true);
+    @include button($secondary, true);
   }
 }
 

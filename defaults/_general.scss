@@ -14,10 +14,8 @@ body {
   color: $black;
   font-family: $sans;
   font-weight: normal;
-  min-width: 320px;
   position: relative;
   text-align: center;
-  // -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -79,11 +77,4 @@ ol {
 
 small {
   @include font-size($small);
-}
-
-.wrapper {
-  margin: 0 auto;
-  text-align: left;
-  max-width: 90%;
-  width: $width;
 }

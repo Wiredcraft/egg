@@ -55,7 +55,8 @@ h6 {
   @include font-size($normal);
 }
 
-p {
+p,
+pre {
   margin: 0 0 $gutter;
 }
 

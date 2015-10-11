@@ -536,7 +536,8 @@ h6 {
   font-size: 16px;
   font-size: 1.6rem; }
 
-p {
+p,
+pre {
   margin: 0 0 20px; }
 
 ul,

@@ -13,7 +13,7 @@
   .options {
     background: #FFF;
     border: 1px solid $line;
-    border-radius: $radius;
+    border-radius: 2*$radius;
     box-shadow: $shadow;
     > * {
       display: block;
@@ -24,19 +24,6 @@
       @include transition-duration($ease);
       &:hover {
         background: $light;
-      }
-      &.separated{
-        margin-top: $gutter/2;
-        position: relative;
-        &:after {
-          content: ' ';
-          display: block;
-          border-top: 1px solid $line;
-          left: 0;
-          position: absolute;
-          top: -$gutter/4;
-          width: 100%;
-        }
       }
     }
   }

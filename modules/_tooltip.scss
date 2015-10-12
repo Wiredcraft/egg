@@ -11,6 +11,8 @@
     padding: 1.5*$gutter/4 1.5*$gutter/2;
     position: absolute;
     text-align: center;
+    @include transition-property(margin, opacity);
+    @include transition-duration($ease);
     visibility: hidden;
     white-space: nowrap;
     width: auto;
@@ -18,8 +20,6 @@
   }
   &:hover span {
     opacity: 1;
-    @include transition-property(opacity, margin);
-    @include transition-duration(0.1s);
     visibility: visible;
   }
   @if $position == top {

@@ -1,53 +1,23 @@
-/* Forms */
-
 .field {
   margin-bottom: $gutter/2;
-}
-
-/* Validation */
-
-.field .status:before {
-  display: inline-block;
-  @include icon();
-  margin-left: $gutter/4;
-}
-
-.field .description {
-  color: $grey;
-  display: block;
-  @include font-size($small);
-  margin-top: $gutter/4;
-}
-
-input:not([type=submit]),
-textarea {
-  background: $background;
-  border-radius: $radius;
-  box-sizing: border-box;
-  box-shadow: rgba(0, 0, 0, 0.08) 0 1px 0 0 inset;
+  .description {
+    color: $grey;
+    display: block;
+    @include font-size($small);
+    margin-top: $gutter/4;
+  }
 }
 
 label,
 .label {
-  @include font-size($small);
-  color: inherit;
+  @include font-size($smaller);
+  display: block;
   margin: 0 0 $gutter/5;
-  text-transform: uppercase;
 }
 
 .select {
-  font-weight: 600;
-
-
-  &:hover {
-    &:after {
-      color: inherit;
-    }
-  }
   select {
-    @include button($background, true);
-    border: 0;
-    font-size: inherit;
-    padding-right: 1.5*$gutter;
+    @include button($light, true);
+    padding: $gutter/5 1.5*$gutter $gutter/5 $gutter/2;
   }
 }

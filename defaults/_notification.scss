@@ -6,16 +6,30 @@
   padding: $gutter/2 1.5*$gutter/2;
   &.error,
   &.info,
-  &.ok,
+  &.success,
   &.undefined,
-  &.warning { color: #FFF; }
-  &.error { background: $red; }
-  &.info { background: $blue; }
-  &.ok { background: $green; }
-  &.undefined { background: $purple; }
   &.warning {
-    background: tint($yellow, 40%);
-    color: shade($yellow, 80%);
+    color: #FFF;
+  }
+  &.error {
+    background: tint($red, 80%);
+    color: $red;
+  }
+  &.info {
+    background: tint($blue, 80%);
+    color: $blue;
+  }
+  &.success {
+    background: tint($green, 80%);
+    color: $green;
+  }
+  &.undefined {
+    background: tint($purple, 80%);
+    color: $purple;
+  }
+  &.warning {
+    background: tint($orange, 80%);
+    color: $orange;
   }
   > *:last-child {
     margin-bottom: 0;
@@ -29,21 +43,17 @@
     }
   }
   .close {
+    background: transparent;
+    border: 0;
     color: inherit;
     float: right;
-    opacity: 0.7;
+    opacity: 0.5;
+    padding: 0;
     text-decoration: none;
     @include transition-property(opacity);
     @include transition-duration($ease);
     &:hover {
       opacity: 1;
-    }
-    &:before {
-      @include icon();
-      content: 'x';
-    }
-    span {
-      display: none;
     }
   }
 }

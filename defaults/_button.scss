@@ -1,12 +1,12 @@
 .button {
-  @include button();
+  @include button($light, true);
   @include font-size($smaller);
   text-align: center;
   &.primary {
-    @include button($primary, false);
+    @include button($primary);
   }
   &.secondary {
-    @include button($secondary, false);
+    @include button($green);
   }
 }
 

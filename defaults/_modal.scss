@@ -16,6 +16,7 @@
 #modal {
   background: #FFF;
   border-radius: $radius;
+  box-shadow: rgba(0, 0, 0, 0.08) 0 1px 0 0 inset;
   display: none;
   margin: 4*$gutter auto 2*$gutter;
   max-width: 600px;
@@ -30,21 +31,16 @@
       margin: 0;
     }
     .close {
-      color: $line;
+      background: transparent;
+      border: 0;
+      color: $grey;
       float: right;
-      @include font-size($large);
-      line-height: 1;
+      outline: none;
+      padding: 0;
       @include transition-property(color);
       @include transition-duration($ease);
-      &:before {
-        @include icon();
-        content: 'X';
-      }
       &:hover {
         color: $red;
-      }
-      span {
-        display: none;
       }
     }
   }
@@ -56,13 +52,13 @@
   }
 }
 
-body.modal {
-  #overlay {
-    background: rgba(0, 0, 0, 0.3);
-    opacity: 1;
-    visibility: visible;
-  }
-  #modal {
-    display: block;
-  }
+body.modal #overlay,
+#overlay.active {
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  visibility: visible;
+}
+body.modal #modal,
+#modal.active {
+  display: block;
 }

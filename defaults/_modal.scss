@@ -13,39 +13,34 @@
   z-index: 1000;
 }
 
+// @include animation(scale 1.0s ease-in, slide 2.0s ease);
+
 #modal {
   background: #FFF;
   border-radius: $radius;
   box-shadow: rgba(0, 0, 0, 0.08) 0 1px 0 0 inset;
   display: none;
-  margin: 4*$gutter auto 2*$gutter;
+  margin: 4*$space auto 2*$space;
   max-width: 600px;
-  width: 90%;
+  width: 50%;
   text-align: left;
   z-index: 3000;
+  @include animation(scale 1.0s ease-in, slide 2.0s ease);
+  @include transition-property(width);
+  @include transition-duration($ease);
   > .header {
     border-bottom: 1px solid $line;
-    padding: 1.5*$gutter/2 $gutter;
+    padding: 1.5*$space/2 $space;
     h2 {
       font-size: inherit;
       margin: 0;
     }
     .close {
-      background: transparent;
-      border: 0;
-      color: $grey;
       float: right;
-      outline: none;
-      padding: 0;
-      @include transition-property(color);
-      @include transition-duration($ease);
-      &:hover {
-        color: $red;
-      }
     }
   }
   .body {
-    padding: 1.5*$gutter/2 $gutter;
+    padding: 1.5*$space/2 $space;
     > *:last-child {
       margin-bottom: 0;
     }
@@ -61,4 +56,5 @@ body.modal #overlay,
 body.modal #modal,
 #modal.active {
   display: block;
+  width: 90%;
 }

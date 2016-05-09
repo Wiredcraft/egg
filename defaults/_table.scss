@@ -1,22 +1,20 @@
 table {
-  margin: 0 0 $gutter;
-  th {
-    padding: $gutter/4 $gutter/2;
-  }
-  td {
-    padding: 1.5*$gutter/2 $gutter/2;
-  }
+  border: 1px solid $line;
+  margin: 0 0 $space;
   th,
   td {
-    &:first-child {
-      padding-left: $gutter/4;
-    }
+    border-right: 1px solid $light;
+    padding: $space/4 1.5*$space/2;
     &:last-child {
-      padding-right: $gutter/4;
+      border-right: 0;
     }
   }
+  td {
+    padding: $space/2 1.5*$space/2;
+  }
   thead {
-    color: $grey;
+    background: $light;
+    color: tint($black, 20%);
     @include font-size($small);
     th {
       font-weight: normal;
@@ -28,9 +26,6 @@ table {
       border-top: 1px solid $line;
       @include transition-property(border);
       @include transition-duration($ease);
-      &:last-child {
-        border-bottom: 1px solid $line;
-      }
     }
   }
 }

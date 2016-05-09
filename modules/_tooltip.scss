@@ -8,7 +8,7 @@
     font-weight: 600;
     line-height: 140%;
     opacity: 0;
-    padding: 1.5*$gutter/4 1.5*$gutter/2;
+    padding: 1.5*$space/4 1.5*$space/2;
     position: absolute;
     text-align: center;
     @include transition-property(margin, opacity);

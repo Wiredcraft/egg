@@ -6,7 +6,7 @@
     @include button($primary);
   }
   &.secondary {
-    @include button($green);
+    @include button($secondary);
   }
 }
 

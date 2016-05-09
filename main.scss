@@ -1,8 +1,8 @@
-@import 'bourbon/bourbon';
+@import 'bourbon';
 
 /* Variables (colors, layout, spacing & typography) */
 
-@import 'modules/_variables';
+@import '_variables';
 
 /* 3rd parties */
 
@@ -10,9 +10,10 @@
 
 /* Mixins & Extends */
 
-@import 'modules/_font';
-@import 'modules/_icon';
+@import 'modules/_typography';
+// @import 'modules/_twig';
 @import 'modules/_arrow';
+
 @import 'modules/_tooltip';
 @import 'modules/_form';
 @import 'modules/_button';
@@ -30,3 +31,5 @@
 @import 'defaults/_notification';
 @import 'defaults/_table';
 @import 'defaults/_tooltip';
+
+/* Partials */

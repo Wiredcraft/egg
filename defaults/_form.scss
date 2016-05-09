@@ -1,10 +1,10 @@
 .field {
-  margin-bottom: $gutter/2;
+  margin-bottom: $space/2;
   .description {
     color: $grey;
     display: block;
     @include font-size($small);
-    margin-top: $gutter/4;
+    margin-top: $space/4;
   }
 }
 
@@ -12,12 +12,12 @@ label,
 .label {
   @include font-size($smaller);
   display: block;
-  margin: 0 0 $gutter/5;
+  margin: 0 0 $space/6;
 }
 
 .select {
   select {
     @include button($light, true);
-    padding: $gutter/5 1.5*$gutter $gutter/5 $gutter/2;
+    padding: $space/6 1.5*$space $space/6 $space/2;
   }
 }

@@ -17,8 +17,8 @@
     box-shadow: $shadow;
     > * {
       display: block;
-      margin: $gutter/5 0;
-      padding: $gutter/5 $gutter/2;
+      margin: $space/6 0;
+      padding: $space/6 $space/2;
       white-space: nowrap;
       @include transition-property(background);
       @include transition-duration($ease);

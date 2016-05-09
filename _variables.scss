@@ -1,0 +1,46 @@
+/* Colors */
+
+$blue: #0074D9 !default;
+$green: #2ECC40 !default;
+$yellow: #FFDC00 !default;
+$orange: #FF851B !default;
+$red: #FF4136 !default;
+$purple: #B10DC9 !default;
+$black: #333 !default;
+$grey: #CCC !default;
+$silver: #F8F8F8 !default;
+
+$primary: $blue !default;
+$secondary: $green !default;
+$light: $silver !default;
+$line: shade($silver, 5%) !default;
+$background: #FFF !default;
+
+/* Sizes */
+
+$pico: 10 !default;
+$micro: 11 !default;
+$small: 12 !default;
+$smaller: 14 !default;
+$normal: 16 !default;
+$larger: 18 !default;
+$large: 24 !default;
+$huge: 32 !default;
+$gigantic: 48 !default;
+$humongous: 64 !default;
+
+/* Fonts */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic);
+
+$body: 'Open Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif !default;
+$headline: 'Montserrat', 'Helvetica Neue', Helvetica, sans-serif !default;
+$code: 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace !default;
+
+/* Misc */
+
+$ease: 0.2s !default;
+$space: 24px !default;
+$radius: 3px !default;
+$shadow: rgba(0, 0, 0, 0.05) 0 1px 0 0 !default;

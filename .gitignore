@@ -3,4 +3,4 @@
 !.gitmodules
 *~
 
-bourbon/
+node_modules/

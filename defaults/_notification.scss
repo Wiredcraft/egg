@@ -2,8 +2,8 @@
   background: $light;
   border-radius: $radius;
   display: block;
-  margin-bottom: $gutter;
-  padding: $gutter/2 1.5*$gutter/2;
+  margin-bottom: $space;
+  padding: $space/2 1.5*$space/2;
   &.error,
   &.info,
   &.success,

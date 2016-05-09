@@ -1,6 +1,7 @@
 @mixin button($color: $blue, $clear: false, $border: true) {
   background: $color;
   border-radius: $radius;
+  box-sizing: border-box;
   @if $clear == true {
     color: inherit;
   }
@@ -9,11 +10,23 @@
   }
   display: inline-block;
   outline: none;
-  padding: $gutter/5 $gutter;
+  padding: $space/4 $space;
   @include transition-property(background, border, color);
   @include transition-duration($ease);
   &:hover,
   &:focus {
+    @if $clear == true {
+      background: tint($color, 30%);
+      color: inherit;
+    }
+    @else {
+      background: tint($color, 15%);
+      color: #FFF;
+    }
+    text-decoration: none;
+  }
+  &:active,
+  &.active {
     @if $clear == true {
       background: shade($color, 5%);
       color: inherit;
@@ -24,23 +37,12 @@
     }
     text-decoration: none;
   }
-  &:active,
-  &.active {
-    @if $clear == true {
-      background: tint($color, 40%);
-      color: inherit;
-    }
-    @else {
-      background: tint($color, 10%);
-      color: #FFF;
-    }
-    text-decoration: none;
-  }
   &[disabled=disabled],
   &[disabled=true],
-  &[disabled] {
-    background: tint($black, 98%);
-    border-color: shade(tint($black, 98%), 10%);
+  &[disabled],
+  &.disabled {
+    background: $silver;
+    border-color: shade($silver, 10%);
     color: $grey;
   }
   @if $border == true {

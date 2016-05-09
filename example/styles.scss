@@ -1,5 +1,42 @@
 @import '../main.scss';
 
-body {
-  padding: $space;
+#navigation {
+  background: $light;
+  border-right: 1px solid $line;
+  bottom: 0;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  text-align: center;
+  top: 0;
+  width: 25%;
+  .header {
+    margin-bottom: $space;
+    padding: $space;
+    .credit {
+      @include font-size($small);
+    }
+    .button {
+      width: 100%;
+    }
+  }
+  .links {
+    a {
+      border-top: 1px solid $line;
+      color: $black;
+      display: block;
+      font-family: $headline;
+      font-weight: bold;
+      padding: $space/4 $space;
+    }
+  }
+}
+
+#content {
+  box-sizing: border-box;
+  margin-left: 25%;
+  padding: 2*$space;
+  h2 a {
+    color: inherit;
+  }
 }

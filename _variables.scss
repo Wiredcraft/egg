@@ -1,17 +1,17 @@
-/* Colors */
+/* Colors (stolen from http://flatuicolors.com/) */
 
-$blue: #0074D9 !default;
-$green: #2ECC40 !default;
-$yellow: #FFDC00 !default;
-$orange: #FF851B !default;
-$red: #FF4136 !default;
-$purple: #B10DC9 !default;
-$black: #333 !default;
-$grey: #CCC !default;
-$silver: #F8F8F8 !default;
+$blue: #3498db !default;
+$green: #2ecc71 !default;
+$yellow: #f1c40f !default;
+$orange: #e67e22 !default;
+$red: #e74c3c !default;
+$purple: #9b59b6 !default;
+$black: #2c3e50 !default;
+$grey: #95a5a6 !default;
+$silver: #ecf0f1 !default;
 
 $primary: $blue !default;
-$secondary: $green !default;
+$secondary: $purple !default;
 $light: $silver !default;
 $line: shade($silver, 5%) !default;
 $background: #FFF !default;

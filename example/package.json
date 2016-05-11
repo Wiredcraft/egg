@@ -17,8 +17,6 @@
   "homepage": "https://wiredcraft.com/egg",
   "dependencies": {
     "gulp": "*",
-    "gulp-concat": "*",
-    "gulp-minify-css": "*",
     "gulp-sass": "*",
     "node-bourbon": "*"
   }

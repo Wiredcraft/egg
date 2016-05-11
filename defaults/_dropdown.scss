@@ -13,17 +13,22 @@
   .options {
     background: #FFF;
     border: 1px solid $line;
-    border-radius: 2*$radius;
+    border-radius: $radius;
     box-shadow: $shadow;
+    box-sizing: border-box;
+    @include font-size($normal);
+    min-width: 100%;
     > * {
       display: block;
-      margin: $space/6 0;
-      padding: $space/6 $space/2;
+      padding: $space/6 $space;
       white-space: nowrap;
       @include transition-property(background);
       @include transition-duration($ease);
       &:hover {
         background: $light;
+      }
+      &.separated {
+        border-top: 1px solid $line;
       }
     }
   }

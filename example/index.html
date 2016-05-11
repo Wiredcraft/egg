@@ -55,22 +55,22 @@
 <body>
   <aside id='navigation'>
     <header class='header'>
-      <div class='credit'>Built with ♥ by Wiredcraft</div>
+      <div class='credit'>Built with ♥ by <a href='https://wiredcraft.com'>Wiredcraft</a></div>
       <h1>egg</h1>
       <a href='https://github.com/Wiredcraft/twig/archive/v1.0.2.zip' class='button primary'>Download v1.0.2</a>
       <small>Or <a href='https://github.com/Wiredcraft/twig/' class='github'>fork on GitHub</a></small>
     </header>
     <nav class='links'>
-      <a href='#introduction'>Introduction</a>
-      <a href='#structure'>Structure</a>
-      <a href='#how-to'>How to use it</a>
+      <a href='#introduction'>What is egg?</a>
+      <a href='#how-to'>How do I use it?</a>
+      <a href='#examples'>Examples</a>
     </nav>
   </aside>
 
   <section id='content'>
     <article class='article'>
-      <h2><a href='#introduction' id='introduction'>Introduction</a></h2>
-      <p>egg was built as an alternative to the many CSS/SASS frameworks out there; Foundation, Bootstrap and the likes. It intends to be minimalistic, solving as few problems as possible and providing developers with the basic defaults and mixins to solve the problems they experience designing their Web apps and websites.</p>
+      <h2><a href='#introduction' id='introduction'>What is egg?</a></h2>
+      <p><strong>egg</strong> was built as an alternative to the many CSS/SASS frameworks out there; Foundation, Bootstrap and the likes. It intends to be minimalistic, solving as few problems as possible and providing developers with the basic defaults and mixins to solve the problems they experience designing their Web apps and websites.</p>
       <p>It was designed with two core principles in mind;</p>
       <ul>
         <li><strong>Don't dictate HTML</strong>; while we do provide some defaults, we mostly provide mixins for users to decide how they want to associate style and markups rather than specific (and often heavy) classes and HTML structure.</li>
@@ -79,172 +79,25 @@
     </article>
 
     <article class='article'>
-      <h2><a href='#structure' id='structure'>Structure</a></h2>
-      <p>At the root of the <em>egg</em> repo, you’ll find a few folders and files:</p>
+      <h2><a href='#how-to' id='how-to'>How do I use it?</a></h2>
+      <p><strong>egg</strong> is organized as a single folder with a few key files and subfolders;</p>
       <ul>
-        <li><code>modules/</code> contains mostly mixins that you can use to build your various elements like tooltips or buttons. These are not very opinionated with regards to what HTML they are applied to. It also contains a file for all variables (<code>modules/_varibles.scss</code>) which</li>
-        <li><code>defaults/</code> contains leverages the mixins (from <code>modules/</code>) and provide sensible default ways of applying them to your HTML. This is definitely more opinionated and **is expected to be overriden by</li>
-        <li><code>vendors/</code> which contains (by default )</li>
-        <li><code>partials/</code></li>
+        <li><code>main.css</code> is the main SASS file that pulls all of the mixins and styles together.</li>
+        <li><code>_variables.scss</code> defines configurable variables; colors, font sizes, spacing, typography...</li>
+        <li><code>modules/</code> is mostly a series of mixins helping us solving the core issues; typography, spacing, buttons and forms interactions...</li>
+        <li><code>defaults/</code> is a collection of SASS files associating the mixins and styles from `modules/` with HTML markups and provide sensible defaults.</li>
+        <li><code>vendors/</code> contains styles for 3rd party libraries (by default it only contains <a href='https://necolas.github.io/normalize.css/'>normalize.css)</a>.</li>
+        <li><code>partials/</code> is where the code specific to your Web app or website resides. You would often find things like `_header.scss` to style the header of your app. By default, we only have `_twig.scss` which defines a font-face for the <a href='https://wiredcraft.com/twig'>twig iconset</a>.</li>
       </ul>
+      <p>Simply copy the content of that folder wherever you want (for example the `_scss` folder in your app).</p>
+      <p>We recommend you leave the <code>modules/</code> folder intact, however the rest is fair game: change files in <code>defaults/</code>, tweak `_variables.scss` or choose to select includes and override styles in `main.scss`, that's up to you. Go nuts!</p>
     </article>
 
     <article class='article'>
-      <h2><a href='#how-to' id='how-to'>How to use it</a></h2>
-      <p>We tried multiple ways of organizing and distributing <em>egg</em> (formerly an npm module called <em><a href='https://github.com/Wiredcraft/eggshell'>eggshell</a></em>). We figured out that the best way for people to use a SASS boilerplate was to be able to override things, rather than use it as a dependency they would need to override to bend it to their will.</p>
-      <p>We recommend you leave the <code>modules/</code> folder intact, however the rest is fair game. Change files in <code>defaults/</code> or choose to not load them, override variables, build your own custom partials. Just go nuts.</p>
+      <h2><a href='#examples' id='examples'>Examples</a></h2>
+      <p>If you use <strong>egg</strong>'s defaults, you get a certain amount of styles and elements out of the box. The kitchen sink should help you explore the available styles and illustrate how you use them:</p>
+      <p><a href='sink.html' class='button secondary'>Check the kitchen sink →</a></p>
     </article>
-
-    <article class='article'>
-      <h2><a href='#kitchen-sink' id='kitchen-sink'>Kitchen sink</a></h2>
-
-
-      <p>Simply use a <code>.tooltip</code> on an element will transform the <code>&lt;span/&gt;</code> children into a tooltip;</p>
-      <pre><code>&lt;button class='button tooltip'&gt;Button with a tooltip&lt;span&gt;Hello!&lt;/span&gt;&lt;/button&gt;
-      </code></pre>
-    </article>
-
-    <article class='article'>
-      <h2><a href='#read-5' id='read-5'>Dropdowns</a></h2>
-      <p>Simply use a <code>.tooltip</code> on an element will transform the <code>&lt;span/&gt;</code> children into a tooltip;</p>
-
-<pre><code>&lt;span class='dropdown'&gt;
-  &lt;a&gt;Hover me buddy&lt;/a&gt;
-  &lt;div class='options'&gt;
-    &lt;div&gt;This is option 1&lt;/div&gt;
-    &lt;div&gt;This is option 2&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/span&gt;
-</code></pre>
-<p></p>
-    </article>
-
-    <article class='article'>
-      <h2><a href='#read-6' id='read-6'>Form</a></h2>
-      <p></p><pre><code>&lt;div class='field'&gt;
-  &lt;label&gt;Your email&lt;/label&gt;
-  &lt;span class='select'&gt;
-    &lt;select&gt;
-      &lt;option&gt;China&lt;/option&gt;
-      &lt;option&gt;India&lt;/option&gt;
-      &lt;option&gt;United States&lt;/option&gt;
-      &lt;option&gt;Indonesia&lt;/option&gt;
-      &lt;option&gt;Brazil&lt;/option&gt;
-      &lt;option&gt;Pakistan&lt;/option&gt;
-      &lt;option&gt;Nigeria&lt;/option&gt;
-      &lt;option&gt;Bangladesh&lt;/option&gt;
-      &lt;option&gt;Russia&lt;/option&gt;
-      &lt;option&gt;Japan&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
-&lt;div class='field'&gt;
-  &lt;label&gt;Your email&lt;/label&gt;
-  &lt;input type='email'/&gt;
-&lt;/div&gt;
-&lt;div class='field'&gt;
-  &lt;label&gt;Your email&lt;/label&gt;
-  &lt;input type='email'/&gt;
-&lt;/div&gt;
-&lt;div class='field'&gt;
-  &lt;input type='submit' class='button primary' value='Submit'/&gt;
-  &lt;button class='button'&gt;Cancel&lt;/button&gt;
-&lt;/div&gt;
-</code></pre>
-<p></p>
-    </article>
-
-    <article class='article'>
-      <h2><a href='#read-7' id='read-7'>Notifications</a></h2>
-      <p></p><pre><code>&lt;div class='notification'&gt;
-  &lt;button class='close'&gt;Close&lt;/button&gt;
-  This is a simple error notification
-&lt;/div&gt;
-
-&lt;div class='notification info'&gt;
-  &lt;button class='close'&gt;Close&lt;/button&gt;
-  This is a simple error notification
-&lt;/div&gt;
-
-&lt;div class='notification success'&gt;
-  &lt;button class='close'&gt;Close&lt;/button&gt;
-  This is a simple error notification
-&lt;/div&gt;
-
-&lt;div class='notification warning'&gt;
-  &lt;button class='close'&gt;Close&lt;/button&gt;
-  This is a simple error notification
-&lt;/div&gt;
-
-&lt;div class='notification undefined'&gt;
-  &lt;button class='close'&gt;Close&lt;/button&gt;
-  This is a simple error notification
-&lt;/div&gt;
-
-&lt;div class='notification error'&gt;
-  &lt;button class='close'&gt;Close&lt;/button&gt;
-  This is a simple error notification
-&lt;/div&gt;
-</code></pre>
-<p></p>
-    </article>
-
-    <article class='article'>
-      <h2><a href='#read-8' id='read-8'>Modals</a></h2>
-      <p></p><pre><code>&lt;div id='overlay' class='active'&gt;
-  &lt;div id='modal' class='active'&gt;
-    &lt;header class='header'&gt;
-      &lt;button class='close'&gt;Close&lt;/button&gt;
-      &lt;h2&gt;Hello world!&lt;/h2&gt;
-    &lt;/header&gt;
-    &lt;section class='body'&gt;
-      &lt;p&gt;Hello world!&lt;/p&gt;
-      &lt;div class='field'&gt;
-        &lt;label&gt;Your email&lt;/label&gt;
-        &lt;input type='email' placeholder='Your email address'/&gt;
-      &lt;/div&gt;
-      &lt;div class='field'&gt;
-        &lt;input type='submit' class='button primary'/&gt;
-        &lt;button class='button'&gt;Cancel&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/section&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-<p></p>
-    </article>
-
-    <article class='article'>
-      <h2><a href='#read-13' id='read-13'>Buttons</a></h2>
-      <p></p><p>Simply use the <code>.button</code> class on elements (e.g. button, links) that you want to style as buttons:</p>
-
-<pre><code>&lt;button class='button'&gt;Default&lt;/button&gt;
-&lt;button class='button' disabled&gt;Disabled&lt;/button&gt;
-&lt;button class='button primary'&gt;Primary&lt;/button&gt;
-&lt;button class='button secondary'&gt;Secondary&lt;/button&gt;
-</code></pre>
-
-<p>Additionally you can group buttons together with the <code>.bundle</code> class:</p>
-
-<pre><code>&lt;span class='bundle'&gt;
-  &lt;button class='button'&gt;Option 1&lt;/button&gt;&lt;button class='button'&gt;Option 2&lt;/button&gt;&lt;button class='button'&gt;Option 3&lt;/button&gt;
-&lt;/span&gt;
-</code></pre>
-
-<p>Notice that I put all elements on the same line, otherwise you will end up with spaces between your buttons (which you could fix with some float magic).</p>
-
-<h3 id='customize'>Customize</h3>
-
-<ul>
-  <li><code>defaults/button.scss</code> associates the <code>.button</code>, <code>.button.primary</code>, <code>.button.secondary</code> and <code>.bundle</code> classes.</li>
-  <li><code>modules/button.scss</code> contains the <code>button()</code> and <code>bundle()</code> mixins.</li>
-</ul>
-<p></p>
-    </article>
-
-  </div>
-</section>
-
   </section>
 
   <!-- JS -->

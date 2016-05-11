@@ -1,6 +1,7 @@
 .button {
   @include button($light, true);
-  @include font-size($smaller);
+  @include font-size($normal);
+  font-weight: bold;
   text-align: center;
   &.primary {
     @include button($primary);
@@ -12,7 +13,6 @@
 
 .bundle .button {
   @include bundle;
-  &.primary,
   &.secondary {
     @include bundle;
   }

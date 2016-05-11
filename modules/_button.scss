@@ -10,7 +10,7 @@
   }
   display: inline-block;
   outline: none;
-  padding: $space/4 $space;
+  padding: $space/6 $space;
   @include transition-property(background, border, color);
   @include transition-duration($ease);
   &:hover,

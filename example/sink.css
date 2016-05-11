@@ -1040,35 +1040,5 @@ table {
     margin-bottom: 8px; }
 
 /* Partials */
-#navigation {
-  background: #ecf0f1;
-  border-right: 1px solid #e0e4e5;
-  bottom: 0;
-  box-sizing: border-box;
-  position: fixed;
-  left: 0;
-  text-align: center;
-  top: 0;
-  width: 25%; }
-  #navigation .header {
-    margin-bottom: 24px;
-    padding: 24px; }
-    #navigation .header .credit {
-      font-size: 12px;
-      font-size: 1.2rem; }
-    #navigation .header .button {
-      width: 100%; }
-  #navigation .links a {
-    border-top: 1px solid #e0e4e5;
-    color: #2c3e50;
-    display: block;
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
-    font-weight: bold;
-    padding: 6px 24px; }
-
-#content {
-  box-sizing: border-box;
-  margin-left: 25%;
-  padding: 48px; }
-  #content h2 a {
-    color: inherit; }
+body {
+  padding: 24px; }

@@ -60,7 +60,7 @@ textarea,
     content: '▾';
     cursor: pointer;
     @include font-size($smaller);
-    line-height: 1;
+    line-height: 140%;
     pointer-events: none;
     position: absolute;
     right: $space/2;

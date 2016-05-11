@@ -21,3 +21,9 @@ label,
     padding: $space/6 1.5*$space $space/6 $space/2;
   }
 }
+
+input,
+textarea,
+select {
+  @include font-size($normal);
+}

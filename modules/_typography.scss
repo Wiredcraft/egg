@@ -9,8 +9,8 @@ html {
 
 body {
   font-family: $body;
-  @include font-size($larger);
-  font-size: $larger + px; // Because of Chrome bug (see https://code.google.com/p/chromium/issues/detail?id=319623)
+  @include font-size($regular);
+  font-size: $regular + px; // Because of Chrome bug (see https://code.google.com/p/chromium/issues/detail?id=319623)
   font-weight: normal;
   line-height: 160%;
 }

@@ -1,3 +1,6 @@
+
+/* Dropdown */
+
 .dropdown {
   @include dropdown(true);
   > *:first-child {
@@ -16,7 +19,6 @@
     border-radius: $radius;
     box-shadow: $shadow;
     box-sizing: border-box;
-    @include font-size($normal);
     min-width: 100%;
     > * {
       display: block;

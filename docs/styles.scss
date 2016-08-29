@@ -1,0 +1,88 @@
+// Vanilla egg stuff
+@import '../main.scss';
+
+// Adding all the partials for the demo
+@import '../partials/_dropdown';
+@import '../partials/_modal';
+@import '../partials/_notifications';
+@import '../partials/_twig';
+
+/* Below is the custom code for the example page */
+
+$wrapper: 700px;
+
+body {
+  background: $light;
+  text-align: center;
+}
+
+.wrapper {
+	margin: 0 auto;
+  max-width: $wrapper;
+  position: relative;
+  width: 92%;
+}
+
+#header {
+  background: $background;
+  border-bottom: 1px solid $line;
+  padding: $space 0;
+  .credit {
+    color: $grey;
+    a {
+      color: inherit;
+    }
+  }
+  .button {
+    @include font-size($large);
+    margin-bottom: $space/2;
+    padding: $space/2 $space;
+  }
+  small {
+    display: block;
+  }
+}
+
+#content,
+#sink {
+  padding: $space;
+  .wrapper {
+    text-align: left;
+  }
+  h2 a {
+    color: inherit;
+  }
+}
+
+#content {
+  border-bottom: 1px solid $line;
+}
+
+#sink {
+  background: $background;
+  .section {
+    border: 1px solid $line;
+    border-radius: $radius;
+    margin-bottom: $space;
+    padding: $space;
+    .section-label {
+      background: $light;
+      border-bottom: 1px dotted $line;
+      color: $grey;
+      @include font-size($small);
+      margin: -$space;
+      margin-bottom: $space;
+      padding: $space/4 $space;
+      text-transform: uppercase;
+    }
+    p,
+    pre,
+    ol,
+    table,
+    ul {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

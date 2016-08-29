@@ -25,8 +25,10 @@ body {
 
 #header {
   background: $background;
-  border-bottom: 1px solid $line;
   padding: $space 0;
+  h1 {
+    @include font-size($humongous);
+  }
   .credit {
     color: $grey;
     a {
@@ -36,36 +38,37 @@ body {
   .button {
     @include font-size($large);
     margin-bottom: $space/2;
-    padding: $space/2 $space;
+    padding: $space/2 1.5*$space;
   }
   small {
     display: block;
   }
 }
 
-#content,
-#sink {
+.section {
+  border-top: 1px solid $line;
   padding: $space;
   .wrapper {
     text-align: left;
+    p,
+    pre,
+    ol,
+    table,
+    ul {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
   h2 a {
     color: inherit;
   }
-}
-
-#content {
-  border-bottom: 1px solid $line;
-}
-
-#sink {
-  background: $background;
-  .section {
+  .excerpt {
     border: 1px solid $line;
     border-radius: $radius;
     margin-bottom: $space;
     padding: $space;
-    .section-label {
+    .header {
       background: $light;
       border-bottom: 1px dotted $line;
       color: $grey;
@@ -85,4 +88,8 @@ body {
       }
     }
   }
+}
+
+#sink {
+  background: $background;
 }

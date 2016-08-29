@@ -16,12 +16,11 @@
 #modal {
   background: #FFF;
   border-radius: $radius;
-  box-shadow: rgba(0, 0, 0, 0.08) 0 1px 0 0 inset;
   display: none;
   margin: 4*$space auto 2*$space;
   max-width: 600px;
-  width: 50%;
   text-align: left;
+  width: 50%;
   z-index: 3000;
   @include animation(scale 1.0s ease-in, slide 2.0s ease);
   @include transition-property(width);
@@ -31,6 +30,7 @@
     padding: 1.5*$space/2 $space;
     h2 {
       font-size: inherit;
+      line-height: inherit;
       margin: 0;
     }
     .close {
@@ -47,7 +47,7 @@
 
 body.modal #overlay,
 #overlay.active {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.8);
   opacity: 1;
   visibility: visible;
 }

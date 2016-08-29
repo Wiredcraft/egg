@@ -418,6 +418,7 @@ textarea,
   border: 1px solid #DDDDDD;
   border-radius: 2px;
   box-sizing: border-box;
+  display: block;
   padding: 4px 12px;
   -webkit-transition-property: background, border;
   -moz-transition-property: background, border;
@@ -669,8 +670,7 @@ table {
     color: #AAAAAA;
     display: block;
     font-size: 12px;
-    font-size: 1.2rem;
-    margin-top: 6px; }
+    font-size: 1.2rem; }
 
 label,
 .label {
@@ -958,12 +958,11 @@ select {
 #modal {
   background: #FFF;
   border-radius: 2px;
-  box-shadow: rgba(0, 0, 0, 0.08) 0 1px 0 0 inset;
   display: none;
   margin: 96px auto 48px;
   max-width: 600px;
-  width: 50%;
   text-align: left;
+  width: 50%;
   z-index: 3000;
   -webkit-animation: scale 1s ease-in, slide 2s ease;
   -moz-animation: scale 1s ease-in, slide 2s ease;
@@ -979,6 +978,7 @@ select {
     padding: 18px 24px; }
     #modal > .header h2 {
       font-size: inherit;
+      line-height: inherit;
       margin: 0; }
     #modal > .header .close {
       float: right; }
@@ -989,7 +989,7 @@ select {
 
 body.modal #overlay,
 #overlay.active {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.8);
   opacity: 1;
   visibility: visible; }
 
@@ -1066,8 +1066,10 @@ body {
 
 #header {
   background: #FFF;
-  border-bottom: 1px solid #DDDDDD;
   padding: 24px 0; }
+  #header h1 {
+    font-size: 64px;
+    font-size: 6.4rem; }
   #header .credit {
     color: #AAAAAA; }
     #header .credit a {
@@ -1076,31 +1078,29 @@ body {
     font-size: 24px;
     font-size: 2.4rem;
     margin-bottom: 12px;
-    padding: 12px 24px; }
+    padding: 12px 36px; }
   #header small {
     display: block; }
 
-#content,
-#sink {
+.section {
+  border-top: 1px solid #DDDDDD;
   padding: 24px; }
-  #content .wrapper,
-  #sink .wrapper {
+  .section .wrapper {
     text-align: left; }
-  #content h2 a,
-  #sink h2 a {
+    .section .wrapper p:last-child,
+    .section .wrapper pre:last-child,
+    .section .wrapper ol:last-child,
+    .section .wrapper table:last-child,
+    .section .wrapper ul:last-child {
+      margin-bottom: 0; }
+  .section h2 a {
     color: inherit; }
-
-#content {
-  border-bottom: 1px solid #DDDDDD; }
-
-#sink {
-  background: #FFF; }
-  #sink .section {
+  .section .excerpt {
     border: 1px solid #DDDDDD;
     border-radius: 2px;
     margin-bottom: 24px;
     padding: 24px; }
-    #sink .section .section-label {
+    .section .excerpt .header {
       background: #EEE;
       border-bottom: 1px dotted #DDDDDD;
       color: #AAAAAA;
@@ -1110,9 +1110,12 @@ body {
       margin-bottom: 24px;
       padding: 6px 24px;
       text-transform: uppercase; }
-    #sink .section p:last-child,
-    #sink .section pre:last-child,
-    #sink .section ol:last-child,
-    #sink .section table:last-child,
-    #sink .section ul:last-child {
+    .section .excerpt p:last-child,
+    .section .excerpt pre:last-child,
+    .section .excerpt ol:last-child,
+    .section .excerpt table:last-child,
+    .section .excerpt ul:last-child {
       margin-bottom: 0; }
+
+#sink {
+  background: #FFF; }

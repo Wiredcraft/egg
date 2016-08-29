@@ -17,6 +17,7 @@ textarea,
   border: 1px solid $line;
   border-radius: $radius;
   box-sizing: border-box;
+  display: block;
   padding: $space/6 $space/2;
   @include transition-property(background, border);
   @include transition-duration($ease);

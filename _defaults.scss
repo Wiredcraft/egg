@@ -189,6 +189,14 @@ select {
   font-size: inherit;
 }
 
+.actions {
+  border-top: 1px solid $light;
+  border-radius: 0 0 $radius $radius;
+  margin-top: $space/2;
+  padding-top: $space/2;
+  text-align: right;
+}
+
 /* Buttons */
 
 .button {

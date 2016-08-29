@@ -2,15 +2,30 @@
 
 .notification {
   border: 1px solid $line;
-  border-left: 4px solid $light;
+  border-left: 3px solid $line;
   border-radius: $radius;
   display: block;
   padding: $space/4 $space/2;
-  &.error { border-left-color: $red; }
-  &.info { border-color: $blue; }
-  &.success { border-color: $green; }
-  &.undefined { border-color: $purple; }
-  &.warning { border-color: $orange; }
+  &.error {
+    border-color: $red;
+    color: $red;
+  }
+  &.info {
+    border-color: $blue;
+    color: $blue;
+  }
+  &.success {
+    border-color: $green;
+    color: $green;
+  }
+  &.undefined {
+    border-color: $purple;
+    color: $purple;
+  }
+  &.warning {
+    border-color: $orange;
+    color: $orange;
+  }
   > *:last-child {
     margin-bottom: 0;
   }

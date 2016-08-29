@@ -67,7 +67,7 @@
       <p>It was designed with two core principles in mind;</p>
       <ul>
         <li><strong>Don't dictate HTML</strong>; while we do provide some defaults, we mostly provide mixins for users to decide how they want to associate style and markups rather than specific (and often heavy) classes and HTML structure.</li>
-        <li><strong>Don't solve too many prolems</strong>; we focused on the few things that we think are difficult or important when building for the Web; typography, modals, forms... The rest is best solved by developerss for their specific use case.</li>
+        <li><strong>Don't solve too many prolems</strong>; we focused on the few things that we think are difficult or important when building for the Web; typography, modals, forms... The rest is best solved by developers for their specific use case.</li>
       </ul>
     </div>
   </section>
@@ -77,7 +77,7 @@
       <h2><a href='#examples' id='examples'>Examples</a></h2>
       <p>If you use <strong>egg</strong>'s defaults, you get a certain amount of styles and elements out of the box. The kitchen sink should help you explore the available styles and illustrate how you use them:</p>
       <section class='excerpt' id='Typography'>
-        <div class='excerpt-label'>Typography</div>
+        <header class='header'>Typography</header>
         <h1>This is a headline 1</h1>
         <h2>And a headline 2</h2>
         <h3>And finally a headline 3</h3>
@@ -85,7 +85,7 @@
       </section>
 
       <section class='excerpt' id='Buttons'>
-        <div class='excerpt-label'>Buttons</div>
+        <header class='header'>Buttons</header>
         <p><button class='button'>Default button</button></p>
         <p><button class='button primary'>Primary button</button></p>
         <p><button class='button secondary'>Secondary button</button></p>
@@ -95,7 +95,7 @@
       </section>
 
       <section class='excerpt' id='Dropdown'>
-        <div class='excerpt-label'>Drodown</div>
+        <header class='header'>Drodown</header>
         <span class='dropdown'>
           <button class='button'>Dropdown menu</button>
           <div class='options'>
@@ -107,12 +107,12 @@
       </section>
 
       <section class='excerpt' id='Tooltip'>
-        <div class='excerpt-label'>Tooltip</div>
+        <header class='header'>Tooltip</header>
         <p>This paragraph contains <u class='tooltip'>text which shows a tooltip on hover <span>Hello world!</span></u>.</p>
       </section>
 
       <section class='excerpt' id='Notifications'>
-        <div class='excerpt-label'>Notifications</div>
+        <header class='header'>Notifications</header>
         <p class='notification'>Default notification</p>
         <p class='notification info'>Info notification</p>
         <p class='notification success'>Success notification</p>
@@ -121,7 +121,7 @@
       </section>
 
       <section class='excerpt' id='code'>
-        <div class='excerpt-label'>Code</div>
+        <header class='header'>Code</header>
         <p>You can have code in a paragraph like <code>function</code>, or a block of code like below:</p>
 <pre><code>function something() {
   return 'Hello world!';
@@ -129,7 +129,7 @@
       </section>
 
       <section class='excerpt' id='form'>
-        <div class='excerpt-label'>Form</div>
+        <header class='header'>Form</header>
         <form>
           <div class='field'>
             <label>Email address</label>
@@ -152,17 +152,17 @@
             <span class='description'>If you have any additional comment.</span>
           </div>
           <div class='actions'>
-            <input class='button primary' type='submit' value='Register'/>
             <button class='button'>Cancel</button>
+            <input class='button primary' type='submit' value='Register'/>
           </div>
       </section>
 
       <section class='excerpt' id='responsive'>
-        <div class='excerpt-label'>Responsive</div>
+        <header class='header'>Responsive</header>
       </section>
 
       <section class='excerpt' id='Modal'>
-        <div class='excerpt-label'>Modal (& overlay)</div>
+        <header class='header'>Modal (& overlay)</header>
         <script>
           function hideModal() {
             document.body.classList.remove('modal');
@@ -177,7 +177,7 @@
       </section>
 
       <section class='excerpt' id='Table'>
-        <div class='excerpt-label'>Table</div>
+        <header class='header'>Table</header>
         <table>
           <thead>
             <th>Name</th>
@@ -206,21 +206,19 @@
     </div>
   </section>
 
-  <section class='section' id='how-to'>
+  <section class='section' id='use'>
     <div class='wrapper'>
       <article class='article'>
         <h2><a href='#how-to' id='how-to'>How do I use it?</a></h2>
-        <p><strong>egg</strong> is organized as a single folder with a few key files and subfolders;</p>
         <ul>
-          <li><code>main.css</code> is the main SASS file that pulls all of the mixins and styles together.</li>
-          <li><code>_variables.scss</code> defines configurable variables; colors, font sizes, spacing, typography...</li>
-          <li><code>modules/</code> is mostly a series of mixins helping us solving the core issues; typography, spacing, buttons and forms interactions...</li>
-          <li><code>defaults/</code> is a collection of SASS files associating the mixins and styles from `modules/` with HTML markups and provide sensible defaults.</li>
-          <li><code>vendors/</code> contains styles for 3rd party libraries (by default it only contains <a href='https://necolas.github.io/normalize.css/'>normalize.css)</a>.</li>
-          <li><code>partials/</code> is where the code specific to your Web app or website resides. You would often find things like `_header.scss` to style the header of your app. By default, we only have `_twig.scss` which defines a font-face for the <a href='http://wiredcraft.github.io/twig'>twig iconset</a>.</li>
+          <li><code>main.css</code> is a good starting point for adding new styles.</li>
+          <li><code>_variables.scss</code> defines colors, font sizes, spacing & typography. Enough if you just want to make a few adjustments.</li>
+          <li><code>modules/</code> contains a few mixins that addresses some of the cor eissues (typography, spacing, buttons, etc).</li>
+          <li><code>vendors/</code> should contain 3rd party libraries (e.g. <code><a href='https://necolas.github.io/normalize.css/'>normalize.css)</a></code>.</li>
+          <li><code>partials/</code> is where you can organize code specific to your style (e.g. `partials/header.scss` for the header). It includes a few styles that are less often used with <strong>egg</strong> (e.g. the modal).</li>
         </ul>
         <p>Simply copy the content of that folder wherever you want (for example the `_scss` folder in your app).</p>
-        <p>We recommend you leave the <code>modules/</code> folder intact, however the rest is fair game: change files in <code>defaults/</code>, tweak `_variables.scss` or choose to select includes and override styles in `main.scss`, that's up to you. Go nuts!</p>
+        <p>We recommend you leave the <code>modules/</code> folder intact, however the rest is fair game: change files in <code>partials/</code>, tweak `_variables.scss` or choose to select includes and override styles in `main.scss`, that's up to you. Go nuts!</p>
       </article>
     </div>
   </section>

@@ -1,5 +1,6 @@
 /* 3rd parties */
 
+@import 'bourbon';
 @import 'vendors/_normalize';
 
 /* Mixins & Extends */
@@ -111,14 +112,14 @@ code,
   font-family: $code;
   @include font-size($smaller);
   line-height: 140%;
-  padding: 0 $space/4;
+  padding: 0 $space/6;
 }
 
 pre {
   code,
   .code {
     display: block;
-    padding: $space/4 $space/2;
+    padding: $space/2;
     white-space: pre-wrap;
   }
 }
@@ -128,6 +129,7 @@ pre {
 table {
   border: 1px solid $line;
   margin: 0 0 $space;
+  overflow-x:auto;
   text-align: left;
   th,
   td {
@@ -187,6 +189,7 @@ input,
 textarea,
 select {
   font-size: inherit;
+  max-width: 100%;
 }
 
 .actions {

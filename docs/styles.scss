@@ -66,14 +66,11 @@ body {
     border: 1px solid $line;
     border-radius: $radius;
     margin-bottom: $space;
-    padding: $space;
     .header {
       background: $light;
       border-bottom: 1px dotted $line;
       color: $grey;
       @include font-size($small);
-      margin: -$space;
-      margin-bottom: $space;
       padding: $space/4 $space;
       text-transform: uppercase;
     }
@@ -85,6 +82,10 @@ body {
       &:last-child {
         margin-bottom: 0;
       }
+    }
+    .body {
+      overflow-x: auto;
+      padding: $space;
     }
   }
 }

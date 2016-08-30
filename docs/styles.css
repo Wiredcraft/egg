@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* Egg stuff */
+/* Egg Magic */
 /* Colors from http://clrs.cc/ */
 /* Sizes */
 /* Fonts */
@@ -419,7 +419,7 @@ textarea,
   border-radius: 2px;
   box-sizing: border-box;
   display: block;
-  padding: 4px 12px;
+  padding: 4px 6px;
   -webkit-transition-property: background, border;
   -moz-transition-property: background, border;
   transition-property: background, border;
@@ -518,7 +518,7 @@ textarea,
     cursor: pointer;
     font-size: 14px;
     font-size: 1.4rem;
-    line-height: 140%;
+    line-height: 120%;
     pointer-events: none;
     position: absolute;
     right: 12px;
@@ -624,18 +624,19 @@ code,
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 140%;
-  padding: 0 6px; }
+  padding: 0 4px; }
 
 pre code,
 pre .code {
   display: block;
-  padding: 6px 12px;
+  padding: 12px;
   white-space: pre-wrap; }
 
 /* Tables */
 table {
   border: 1px solid #DDDDDD;
   margin: 0 0 24px;
+  overflow-x: auto;
   text-align: left; }
   table th,
   table td {
@@ -711,7 +712,8 @@ label,
 input,
 textarea,
 select {
-  font-size: inherit; }
+  font-size: inherit;
+  max-width: 100%; }
 
 .actions {
   border-top: 1px solid #EEE;
@@ -1096,16 +1098,13 @@ body {
   .section .excerpt {
     border: 1px solid #DDDDDD;
     border-radius: 2px;
-    margin-bottom: 24px;
-    padding: 24px; }
+    margin-bottom: 24px; }
     .section .excerpt .header {
       background: #EEE;
       border-bottom: 1px dotted #DDDDDD;
       color: #AAAAAA;
       font-size: 12px;
       font-size: 1.2rem;
-      margin: -24px;
-      margin-bottom: 24px;
       padding: 6px 24px;
       text-transform: uppercase; }
     .section .excerpt p:last-child,
@@ -1114,6 +1113,9 @@ body {
     .section .excerpt table:last-child,
     .section .excerpt ul:last-child {
       margin-bottom: 0; }
+    .section .excerpt .body {
+      overflow-x: auto;
+      padding: 24px; }
 
 #sink {
   background: #FFF; }

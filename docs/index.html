@@ -78,126 +78,135 @@
       <p>If you use <strong>egg</strong>'s defaults, you get a certain amount of styles and elements out of the box. The kitchen sink should help you explore the available styles and illustrate how you use them:</p>
       <section class='excerpt' id='Typography'>
         <header class='header'>Typography</header>
-        <h1>This is a headline 1</h1>
-        <h2>And a headline 2</h2>
-        <h3>And finally a headline 3</h3>
-        <p>This text last title is followed by a regular paragraph.</p>
+        <div class='body'>
+          <h1>This is a headline 1</h1>
+          <h2>And a headline 2</h2>
+          <h3>And finally a headline 3</h3>
+          <p>This text last title is followed by a regular paragraph.</p>
+        </div>
       </section>
 
       <section class='excerpt' id='Buttons'>
         <header class='header'>Buttons</header>
-        <p><button class='button'>Default button</button></p>
-        <p><button class='button primary'>Primary button</button></p>
-        <p><button class='button secondary'>Secondary button</button></p>
-        <p><span class='bundle'>
-          <button class='button'>Bundle</button><button class='button'>Of</button><button class='button'>Buttons</button>
-        </span></p>
+        <div class='body'>
+          <p><button class='button'>Default button</button></p>
+          <p><button class='button primary'>Primary button</button></p>
+          <p><button class='button secondary'>Secondary button</button></p>
+          <p><span class='bundle'>
+            <button class='button'>Bundle</button><button class='button'>Of</button><button class='button'>Buttons</button>
+          </span></p>
+        </div>
       </section>
 
       <section class='excerpt' id='Dropdown'>
         <header class='header'>Drodown</header>
-        <span class='dropdown'>
-          <button class='button'>Dropdown menu</button>
-          <div class='options'>
-            <a href='#'>Profile</a>
-            <a href='#'>Settings</a>
-            <a href='#' class='separated'>Sign out</a>
-          </div>
-        </span>
+        <div class='body'>
+          <span class='dropdown'>
+            <button class='button'>Dropdown menu</button>
+            <div class='options'>
+              <a href='#'>Profile</a>
+              <a href='#'>Settings</a>
+              <a href='#' class='separated'>Sign out</a>
+            </div>
+          </span>
+        </div>
       </section>
 
       <section class='excerpt' id='Tooltip'>
         <header class='header'>Tooltip</header>
-        <p>This paragraph contains <u class='tooltip'>text which shows a tooltip on hover <span>Hello world!</span></u>.</p>
+        <div class='body'>
+          <p>This paragraph contains <u class='tooltip'>text which shows a tooltip on hover <span>Hello world!</span></u>.</p>
+        </div>
       </section>
 
       <section class='excerpt' id='Notifications'>
         <header class='header'>Notifications</header>
-        <p class='notification'>Default notification</p>
-        <p class='notification info'>Info notification</p>
-        <p class='notification success'>Success notification</p>
-        <p class='notification warning'>Warning notification</p>
-        <p class='notification error'>Error notification</p>
+        <div class='body'>
+          <p class='notification'>Default notification</p>
+          <p class='notification info'>Info notification</p>
+          <p class='notification success'>Success notification</p>
+          <p class='notification warning'>Warning notification</p>
+          <p class='notification error'>Error notification</p>
+        </div>
       </section>
 
       <section class='excerpt' id='code'>
         <header class='header'>Code</header>
-        <p>You can have code in a paragraph like <code>function</code>, or a block of code like below:</p>
+        <div class='body'>
+          <p>You can have code in a paragraph like <code>function</code>, or a block of code like below:</p>
 <pre><code>function something() {
   return 'Hello world!';
 }</code></pre>
+        </div>
       </section>
 
       <section class='excerpt' id='form'>
         <header class='header'>Form</header>
-        <form>
-          <div class='field'>
-            <label>Email address</label>
-            <input type='email' placeholder='me@example.com'/>
-            <span class='description'>This email address must be valid</span>
-          </div>
-          <div class='field'>
-            <label>Send you a digest</label>
-            <span class='select'>
-              <select>
-                <option>Every day</option>
-                <option>Every week</option>
-                <option>Every month</option>
-              </select>
-            </span>
-          </div>
-          <div class='field'>
-            <label>Comments</label>
-            <textarea></textarea>
-            <span class='description'>If you have any additional comment.</span>
-          </div>
-          <div class='actions'>
-            <button class='button'>Cancel</button>
-            <input class='button primary' type='submit' value='Register'/>
-          </div>
+        <div class='body'>
+          <form>
+            <div class='field'>
+              <label>Email address</label>
+              <input type='email' placeholder='me@example.com'/>
+              <span class='description'>This email address must be valid</span>
+            </div>
+            <div class='field'>
+              <label>Send you a digest</label>
+              <span class='select'>
+                <select>
+                  <option>Every day</option>
+                  <option>Every week</option>
+                  <option>Every month</option>
+                </select>
+              </span>
+            </div>
+            <div class='field'>
+              <label>Comments</label>
+              <textarea></textarea>
+              <span class='description'>If you have any additional comment.</span>
+            </div>
+            <div class='actions'>
+              <button class='button'>Cancel</button>
+              <input class='button primary' type='submit' value='Register'/>
+            </div>
+          </form>
+        </div>
       </section>
 
       <section class='excerpt' id='Modal'>
         <header class='header'>Modal (& overlay)</header>
-        <script>
-          function hideModal() {
-            document.body.classList.remove('modal');
-            return;
-          }
-          function showModal() {
-            document.body.classList.add('modal');
-            return;
-          }
-        </script>
-        <a onclick='showModal()' class='button'>Show a modal</a>
+        <div class='body'>
+          <a class='button primary' id='button-modal' onclick='showModal()'>Show a modal</a>
+        </div>
       </section>
 
       <section class='excerpt' id='Table'>
         <header class='header'>Table</header>
-        <table>
-          <thead>
-            <th>Name</th>
-            <th>Location</th>
-            <th>Email</th>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Paul Lambert</td>
-              <td>Paris, France</td>
-              <td>paul@example.com</td>
-            </tr>
-            <tr>
-              <td>John Smith</td>
-              <td>New York, USA</td>
-              <td>john@example.com</td>
-            </tr>
-            <tr>
-              <td>Chen Wang</td>
-              <td>Shanghai, China</td>
-              <td>chen@example.com</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class='body'>
+          <table>
+            <thead>
+              <th>Name</th>
+              <th>Location</th>
+              <th>Email</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Paul Lambert</td>
+                <td>Paris, France</td>
+                <td>paul@example.com</td>
+              </tr>
+              <tr>
+                <td>John Smith</td>
+                <td>New York, USA</td>
+                <td>john@example.com</td>
+              </tr>
+              <tr>
+                <td>Chen Wang</td>
+                <td>Shanghai, China</td>
+                <td>chen@example.com</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
     </div>
   </section>
@@ -219,10 +228,10 @@
     </div>
   </section>
 
-  <div id='overlay'>
-    <div id='modal'>
+  <div id='overlay' onclick='hideModal()'>
+    <div id='modal' onclick='hideModal()'>
       <header class='header'>
-        <a onclick='hideModal()' class='close'>Close</a>
+        <a class='close' id='close-modal'>Close</a>
         <h2>This is a modal</h2>
       </header>
       <section class='body'>
@@ -233,5 +242,15 @@
   </div>
   <!-- JS -->
   <!--[if lt IE 9]><script src='https://html5shim.googlecode.com/svn/trunk/html5.js'></script><![endif]-->
+  <script>
+    function hideModal() {
+      document.body.classList.remove('modal');
+      return;
+    }
+    function showModal() {
+      document.body.classList.add('modal');
+      return;
+    }
+  </script>
 </body>
 </html>

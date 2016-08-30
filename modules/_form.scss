@@ -18,7 +18,7 @@ textarea,
   border-radius: $radius;
   box-sizing: border-box;
   display: block;
-  padding: $space/6 $space/2;
+  padding: $space/6 $space/4;
   @include transition-property(background, border);
   @include transition-duration($ease);
   &:hover {
@@ -61,7 +61,7 @@ textarea,
     content: '▾';
     cursor: pointer;
     @include font-size($smaller);
-    line-height: 140%;
+    line-height: 120%;
     pointer-events: none;
     position: absolute;
     right: $space/2;

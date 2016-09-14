@@ -78,12 +78,18 @@
       <p>If you use <strong>egg</strong>'s defaults, you get a certain amount of styles and elements out of the box. The kitchen sink should help you explore the available styles and illustrate how you use them:</p>
       <section class='excerpt' id='Typography'>
         <header class='header'>Typography</header>
-        <div class='body'>
+        <div class='body' onclick='showCode(this)'>
           <h1>This is a headline 1</h1>
           <h2>And a headline 2</h2>
           <h3>And finally a headline 3</h3>
           <p>This text last title is followed by a regular paragraph.</p>
         </div>
+        <script>
+          function showCode(el) {
+            el.innerHTML;
+            return;
+          }
+        </script>
       </section>
 
       <section class='excerpt' id='Buttons'>

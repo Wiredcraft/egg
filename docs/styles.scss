@@ -84,8 +84,10 @@ body {
       }
     }
     .body {
-      overflow-x: auto;
       padding: $space;
+    }
+    &#Table body {
+      overflow-x: auto;
     }
   }
 }

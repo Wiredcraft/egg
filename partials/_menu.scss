@@ -1,7 +1,4 @@
-
-/* Dropdown */
-
-.dropdown {
+.menu {
   @include dropdown(true);
   > *:first-child {
     cursor: pointer;

@@ -1,7 +1,24 @@
+.field {
+  margin-bottom: $space/2;
+  .description {
+    color: $grey;
+    display: block;
+    @include font-size($small);
+  }
+}
+
+label,
+.label {
+  @include font-size($smaller);
+  display: block;
+  margin: 0 0 $space/6;
+}
+
 input,
 textarea,
 select {
   font-family: inherit;
+  font-size: inherit;
   line-height: inherit;
 }
 
@@ -53,8 +70,10 @@ textarea,
   position: relative;
   & > select {
     @include appearance(none);
+    @include button($light, true);
     background: #FFF;
     cursor: pointer;
+    padding: $space/6 1.5*$space $space/6 $space/2;
   }
   &:after {
     bottom: 0;
@@ -68,4 +87,12 @@ textarea,
     top: 50%;
     @include transform(translateY(-50%));
   }
+}
+
+.actions {
+  border-top: 1px solid $light;
+  border-radius: 0 0 $radius $radius;
+  margin-top: $space/2;
+  padding-top: $space/2;
+  text-align: right;
 }

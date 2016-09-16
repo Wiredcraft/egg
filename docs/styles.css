@@ -376,7 +376,6 @@ th {
 /* Misc */
 /*** MIXINS ***/
 /*** PARTIALS ***/
-/* General */
 @media (max-width: 640px) {
   html {
     font-size: 57%; } }
@@ -911,6 +910,7 @@ textarea,
   transition-duration: 0.2s; }
   #modal > .header {
     border-bottom: 1px solid #DDDDDD;
+    border-radius: 2px 2px 0 0;
     padding: 18px 24px; }
     #modal > .header h2 {
       font-size: inherit;
@@ -933,6 +933,58 @@ body.modal #modal,
 #modal.active {
   display: block;
   width: 90%; }
+
+.tooltip {
+  position: relative; }
+  .tooltip span {
+    background: #111111;
+    border-radius: 2px;
+    color: #FFF;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 140%;
+    opacity: 0;
+    padding: 9px 18px;
+    position: absolute;
+    text-align: center;
+    -webkit-transition-property: margin, opacity;
+    -moz-transition-property: margin, opacity;
+    transition-property: margin, opacity;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    visibility: hidden;
+    white-space: nowrap;
+    width: auto;
+    z-index: 999; }
+  .tooltip:hover span {
+    opacity: 1;
+    visibility: visible; }
+  .tooltip span {
+    bottom: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    .tooltip span:after {
+      content: '';
+      position: absolute;
+      border-right: 5px solid transparent;
+      border-bottom-color: #111111;
+      border-top: 5px solid #111111;
+      border-left: 5px solid transparent;
+      bottom: -5px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%); }
+  .tooltip:hover span {
+    margin-bottom: 8px; }
 
 /* Notifications */
 .notification {
@@ -1026,7 +1078,7 @@ body {
     border: 1px solid #DDDDDD;
     border-radius: 2px;
     margin-bottom: 24px; }
-    .section .excerpt .header {
+    .section .excerpt .title {
       background: #EEE;
       border-bottom: 1px dotted #DDDDDD;
       color: #AAAAAA;
@@ -1048,20 +1100,6 @@ body {
       border-width: 1px 0 0 0;
       padding: 24px;
       position: relative; }
-      .section .excerpt code:before {
-        background: #DDDDDD;
-        border-radius: 0 0 0 2px;
-        color: #FFF;
-        content: '</>';
-        font-family: -apple-system, "Avenir next", Avenir, Roboto, Noto, "Helvetica neue", Helvetica, Arial, Sans-serif;
-        font-size: 12px;
-        font-size: 1.2rem;
-        margin: 0 auto;
-        padding: 3px 6px 2px;
-        position: absolute;
-        right: 0;
-        text-transform: uppercase;
-        top: 0; }
     .section .excerpt#Table body {
       overflow-x: auto; }
 

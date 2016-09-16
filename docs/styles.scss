@@ -61,7 +61,7 @@ body {
     border: 1px solid $line;
     border-radius: $radius;
     margin-bottom: $space;
-    .header {
+    .title {
       background: $light;
       border-bottom: 1px dotted $line;
       color: $grey;
@@ -87,20 +87,6 @@ body {
       border-width: 1px 0 0 0;
       padding: $space;
       position: relative;
-      &:before {
-        background: $line;
-        border-radius: 0 0 0 $radius;
-        color: #FFF;
-        content: '</>';
-        font-family: $body;
-        @include font-size($small);
-        margin: 0 auto;
-        padding: $space/8 $space/4 $space/12;
-        position: absolute;
-        right: 0;
-        text-transform: uppercase;
-        top: 0;
-      }
     }
     &#Table body {
       overflow-x: auto;

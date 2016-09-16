@@ -27,6 +27,7 @@
   @include transition-duration($ease);
   > .header {
     border-bottom: 1px solid $line;
+    border-radius: $radius $radius 0 0;
     padding: 1.5*$space/2 $space;
     h2 {
       font-size: inherit;

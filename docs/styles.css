@@ -511,7 +511,7 @@ table {
     padding: 12px 12px; }
   table thead {
     background: #EEE;
-    color: #414141;
+    color: #404040;
     font-size: 12px;
     font-size: 1.2rem; }
     table thead th {
@@ -554,7 +554,7 @@ table {
     text-decoration: none; }
   .button[disabled=disabled], .button[disabled=true], .button[disabled], .button.disabled {
     background: #DDDDDD;
-    border-color: #c7c7c7;
+    border-color: #c6c6c6;
     color: #AAAAAA; }
   .button.primary {
     background: #0074D9;
@@ -572,7 +572,7 @@ table {
     transition-duration: 0.2s;
     border: 1px solid #0068c3; }
     .button.primary:hover, .button.primary:focus {
-      background: #2689df;
+      background: #2688de;
       color: #FFF;
       text-decoration: none; }
     .button.primary:active, .button.primary.active {
@@ -581,7 +581,7 @@ table {
       text-decoration: none; }
     .button.primary[disabled=disabled], .button.primary[disabled=true], .button.primary[disabled], .button.primary.disabled {
       background: #DDDDDD;
-      border-color: #c7c7c7;
+      border-color: #c6c6c6;
       color: #AAAAAA; }
   .button.secondary {
     background: #2ECC40;
@@ -597,18 +597,18 @@ table {
     -webkit-transition-duration: 0.2s;
     -moz-transition-duration: 0.2s;
     transition-duration: 0.2s;
-    border: 1px solid #29b83a; }
+    border: 1px solid #29b739; }
     .button.secondary:hover, .button.secondary:focus {
-      background: #4dd45d;
+      background: #4dd35c;
       color: #FFF;
       text-decoration: none; }
     .button.secondary:active, .button.secondary.active {
-      background: #29b83a;
+      background: #29b739;
       color: #FFF;
       text-decoration: none; }
     .button.secondary[disabled=disabled], .button.secondary[disabled=true], .button.secondary[disabled], .button.secondary.disabled {
       background: #DDDDDD;
-      border-color: #c7c7c7;
+      border-color: #c6c6c6;
       color: #AAAAAA; }
 
 .bundle .button {
@@ -653,10 +653,6 @@ select {
   line-height: inherit; }
 
 input:not([type=submit]),
-textarea {
-  box-shadow: rgba(0, 0, 0, 0.08) 0 1px 0 0 inset; }
-
-input:not([type=submit]),
 textarea,
 .select select {
   background: #FFF;
@@ -674,7 +670,7 @@ textarea,
   input:not([type=submit]):hover,
   textarea:hover,
   .select select:hover {
-    border-color: #b1b1b1; }
+    border-color: #b0b0b0; }
   input:not([type=submit]):active, input:not([type=submit]):focus,
   textarea:active,
   textarea:focus,
@@ -782,7 +778,7 @@ textarea,
       text-decoration: none; }
     .select > select[disabled=disabled], .select > select[disabled=true], .select > select[disabled], .select > select.disabled {
       background: #DDDDDD;
-      border-color: #c7c7c7;
+      border-color: #c6c6c6;
       color: #AAAAAA; }
   .select:after {
     bottom: 0;
@@ -894,20 +890,35 @@ textarea,
   background: #FFF;
   border-radius: 2px;
   display: none;
-  margin: 96px auto 48px;
+  margin: 96px auto;
   max-width: 600px;
   text-align: left;
   width: 50%;
   z-index: 3000;
-  -webkit-animation: scale 1s ease-in, slide 2s ease;
-  -moz-animation: scale 1s ease-in, slide 2s ease;
-  animation: scale 1s ease-in, slide 2s ease;
+  -webkit-animation: slide 0.2s ease;
+  -moz-animation: slide 0.2s ease;
+  animation: slide 0.2s ease;
   -webkit-transition-property: width;
   -moz-transition-property: width;
   transition-property: width;
   -webkit-transition-duration: 0.2s;
   -moz-transition-duration: 0.2s;
   transition-duration: 0.2s; }
+@-webkit-keyframes slide {
+  0% {
+    margin-top: 0; }
+  100% {
+    margin-top: 96px; } }
+@-moz-keyframes slide {
+  0% {
+    margin-top: 0; }
+  100% {
+    margin-top: 96px; } }
+@keyframes slide {
+  0% {
+    margin-top: 0; }
+  100% {
+    margin-top: 96px; } }
   #modal > .header {
     border-bottom: 1px solid #DDDDDD;
     border-radius: 2px 2px 0 0;
@@ -1100,7 +1111,7 @@ body {
       border-width: 1px 0 0 0;
       padding: 24px;
       position: relative; }
-    .section .excerpt#Table body {
+    .section .excerpt#Table .example {
       overflow-x: auto; }
 
 #sink {

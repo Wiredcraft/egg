@@ -1,50 +1,13 @@
 <!doctype html>
 <html>
 <head>
-  <link rel='canonical' href='http://wiredcraft.github.io/egg/'/>
-
   <title>A SASS boilerplate | egg</title>
 
   <meta charset='utf-8'/>
   <meta http-equiv='Content-Language' content='en'/>
   <meta name='viewport' content='width=device-width, initial-scale=1'/>
-  <meta name='keywords' content='iconset, icons, design, lineart'/>
-  <meta name='description' content='A simple SASS/Bourbon boilerplate'>
-
-  <!-- Open graph -->
-  <meta property='og:site_name' content='egg'/>
-  <meta property='og:type' content='website'/>
-  <meta property='og:title' content='egg is a SASS boilerplate'/>
-  <meta property='og:url' content='http://wiredcraft.github.io/egg/'/>
-  <meta property='og:description' content='A simple SASS/Bourbon boilerplate'/>
-  <meta property='og:image' content='http://wiredcraft.github.io/egg/assets/cover.png'/>
-
-  <!-- Twitter card -->
-  <meta name='twitter:card' content='summary_large_image'/>
-  <meta name='twitter:site' content='wiredcraft'/>
-  <meta name='twitter:creator' content='wiredcraft'/>
-  <meta name='twitter:title' content='egg is a SASS boilerplate'/>
-  <meta name='twitter:description' content='A simple SASS/Bourbon boilerplate'/>
-  <meta name='twitter:image' content='http://wiredcraft.github.io/egg/assets/cover.png'/>
-
-  <!-- Favicons -->
-  <link rel='apple-touch-icon' sizes='57x57' href='http://wiredcraft.github.io/egg/assets/favicons/apple-touch-icon-57x57.png'>
-  <link rel='apple-touch-icon' sizes='60x60' href='http://wiredcraft.github.io/egg/assets/favicons/apple-touch-icon-60x60.png'>
-  <link rel='apple-touch-icon' sizes='72x72' href='http://wiredcraft.github.io/egg/assets/favicons/apple-touch-icon-72x72.png'>
-  <link rel='apple-touch-icon' sizes='76x76' href='http://wiredcraft.github.io/egg/assets/favicons/apple-touch-icon-76x76.png'>
-  <link rel='apple-touch-icon' sizes='114x114' href='http://wiredcraft.github.io/egg/assets/favicons/apple-touch-icon-114x114.png'>
-  <link rel='apple-touch-icon' sizes='120x120' href='http://wiredcraft.github.io/egg/assets/favicons/apple-touch-icon-120x120.png'>
-  <link rel='apple-touch-icon' sizes='144x144' href='http://wiredcraft.github.io/egg/assets/favicons/apple-touch-icon-144x144.png'>
-  <link rel='apple-touch-icon' sizes='152x152' href='http://wiredcraft.github.io/egg/assets/favicons/apple-touch-icon-152x152.png'>
-  <link rel='apple-touch-icon' sizes='180x180' href='http://wiredcraft.github.io/egg/assets/favicons/apple-touch-icon-180x180.png'>
-  <link rel='icon' type='image/png' href='http://wiredcraft.github.io/egg/assets/favicons/favicon-32x32.png' sizes='32x32'>
-  <link rel='icon' type='image/png' href='http://wiredcraft.github.io/egg/assets/favicons/android-chrome-192x192.png' sizes='192x192'>
-  <link rel='icon' type='image/png' href='http://wiredcraft.github.io/egg/assets/favicons/favicon-96x96.png' sizes='96x96'>
-  <link rel='icon' type='image/png' href='http://wiredcraft.github.io/egg/assets/favicons/favicon-16x16.png' sizes='16x16'>
-  <link rel='manifest' href='http://wiredcraft.github.io/egg/assets/favicons/manifest.json'>
-  <meta name='msapplication-TileColor' content='#00aba9'>
-  <meta name='msapplication-TileImage' content='/mstile-144x144.png'>
-  <meta name='theme-color' content='#ffffff'>
+  <meta name='keywords' content='SASS, bourbon, CSS'/>
+  <meta name='description' content='A simple SASS boilerplate'>
 
   <!-- CSS -->
   <link rel='stylesheet' href='styles.css'>
@@ -54,7 +17,7 @@
   <header id='header'>
     <div class='wrapper'>
       <h1>egg</h1>
-      <a href='https://github.com/Wiredcraft/egg/archive/v1.0.0.zip' class='button primary'>Download v1.0.0</a>
+      <a href='https://github.com/Wiredcraft/egg/archive/v1.0.1.zip' class='button primary'>Download v1.0.1</a>
       <small>Or <a href='https://github.com/Wiredcraft/egg/' class='github'>fork the heck out of it on GitHub →</a></small>
       <small class='credit'>Built with ♥ by <a href='https://wiredcraft.com'>Wiredcraft</a></small>
     </div>
@@ -63,11 +26,20 @@
   <section class='section' id='about'>
     <div class='wrapper'>
       <h2><a href='#introduction' id='introduction'>What is egg?</a></h2>
-      <p><strong>egg</strong> was built as an alternative to the many CSS/SASS frameworks out there; Foundation, Bootstrap and the likes. It intends to be minimalistic, solving as few problems as possible and providing developers with the basic defaults and mixins to solve the problems they experience designing their Web apps and websites.</p>
+      <p><strong>egg</strong> was built as an alternative to the many CSS/SASS
+         frameworks out there; Foundation, Bootstrap and the likes. It intends to
+         be minimalistic, solving as few problems as possible and providing developers
+         with the basic defaults and mixins to solve the problems they experience
+         designing their Web apps and websites.</p>
       <p>It was designed with two core principles in mind;</p>
       <ul>
-        <li><strong>Don't dictate HTML</strong>; while we do provide some defaults, we mostly provide mixins for users to decide how they want to associate style and markups rather than specific (and often heavy) classes and HTML structure.</li>
-        <li><strong>Don't solve too many prolems</strong>; we focused on the few things that we think are difficult or important when building for the Web; typography, modals, forms... The rest is best solved by developers for their specific use case.</li>
+        <li><strong>Don't dictate HTML</strong>; while we do provide some defaults,
+            we mostly provide mixins for users to decide how they want to associate
+            style and markups rather than specific (and often heavy) classes and HTML structure.</li>
+        <li><strong>Don't solve too many prolems</strong>; we focused on the few
+            things that we think are difficult or important when building for the
+            Web; typography, modals, forms... The rest is best solved by developers
+            for their specific use case.</li>
       </ul>
     </div>
   </section>
@@ -75,7 +47,9 @@
   <section class='section' id='sink'>
     <div class='wrapper'>
       <h2><a href='#examples' id='examples'>Examples</a></h2>
-      <p>If you use <strong>egg</strong>'s defaults, you get a certain amount of styles and elements out of the box. The kitchen sink should help you explore the available styles and illustrate how you use them:</p>
+      <p>If you use <strong>egg</strong>'s defaults, you get a certain amount of
+         styles and elements out of the box. The kitchen sink should help you explore
+         the available styles and illustrate how you use them:</p>
       <section class='excerpt' id='Typography'>
         <header class='header'>Typography</header>
         <div class='body' onclick='showCode(this)'>
@@ -121,7 +95,8 @@
       <section class='excerpt' id='Tooltip'>
         <header class='header'>Tooltip</header>
         <div class='body'>
-          <p>This paragraph contains <u class='tooltip'>text which shows a tooltip on hover <span>Hello world!</span></u>.</p>
+          <p>This paragraph contains <u class='tooltip'>text which shows a tooltip
+             on hover <span>Hello world!</span></u>.</p>
         </div>
       </section>
 
@@ -139,7 +114,8 @@
       <section class='excerpt' id='code'>
         <header class='header'>Code</header>
         <div class='body'>
-          <p>You can have code in a paragraph like <code>function</code>, or a block of code like below:</p>
+          <p>You can have code in a paragraph like <code>function</code>, or a
+             block of code like below:</p>
 <pre><code>function something() {
   return 'Hello world!';
 }</code></pre>
@@ -221,15 +197,29 @@
     <div class='wrapper'>
       <article class='article'>
         <h2><a href='#how-to' id='how-to'>How do I use it?</a></h2>
+        <p>First, you'll need to run `bower install` to add the normalize and
+           bourbon dependencies to the `vendors/` folder (or if you want to handle
+           this differently, change the way they're loaded in `egg.scss` for example).
+           Then the fun starts:
         <ul>
-          <li><code>main.css</code> is a good starting point for adding new styles.</li>
-          <li><code>_variables.scss</code> defines colors, font sizes, spacing & typography. Enough if you just want to make a few adjustments.</li>
-          <li><code>modules/</code> contains a few mixins that addresses some of the cor eissues (typography, spacing, buttons, etc).</li>
-          <li><code>vendors/</code> should contain 3rd party libraries (e.g. <code><a href='https://necolas.github.io/normalize.css/'>normalize.css</a></code>).</li>
-          <li><code>partials/</code> is where you can organize code specific to your style (e.g. `partials/header.scss` for the header). It includes a few styles that are less often used with <strong>egg</strong> (e.g. the modal).</li>
+          <li>Load <code>egg.css</code> (`@import egg.scss`) or use it as a starting
+              point for your styles.</li>
+          <li><code>_variables.scss</code> defines colors, font sizes, spacing &
+              typography. Enough if you just want to make a few adjustments.</li>
+          <li><code>modules/</code> contains a few mixins that addresses some of
+            the core issues (typography, spacing, buttons, etc).</li>
+          <li><code>vendors/</code> contains 3rd party libraries (normalize and
+              bourbon after `bower install`).</li>
+          <li><code>partials/</code> is where you can organize code specific to
+              your style (e.g. `partials/header.scss` for the header). It includes
+              a few default styles from <strong>egg</strong> too (e.g. the modal).</li>
         </ul>
-        <p>Simply copy the content of that folder wherever you want (for example the `_scss` folder in your app).</p>
-        <p>We recommend you leave the <code>modules/</code> folder intact, however the rest is fair game: change files in <code>partials/</code>, tweak `_variables.scss` or choose to select includes and override styles in `main.scss`, that's up to you. Go nuts!</p>
+        <p>Simply copy the content of that folder wherever you want (for example
+           the `_scss` folder in your app).</p>
+        <p>We recommend you leave the <code>modules/</code> folder intact, however
+           the rest is fair game: change files in <code>partials/</code>, tweak
+           `_variables.scss` or choose to select includes and override styles in
+           `main.scss`, that's up to you. Go nuts!</p>
       </article>
     </div>
   </section>

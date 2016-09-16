@@ -200,9 +200,8 @@
       <article class='article'>
         <h2><a href='#how-to' id='how-to'>How do I use it?</a></h2>
         <p>First, you'll need to run `bower install` to add the normalize and
-           bourbon dependencies to the `vendors/` folder (or if you want to handle
-           this differently, change the way they're loaded in `egg.scss` for example).
-           Then the fun starts:
+           bourbon dependencies (or if you want to handle this differently, change
+           the way they're loaded in `egg.scss` for example). Then the fun starts:
         <ul>
           <li>Load <code>egg.css</code> (`@import egg.scss`) or use it as a starting
               point for your styles.</li>
@@ -210,8 +209,8 @@
               typography. Enough if you just want to make a few adjustments.</li>
           <li><code>modules/</code> contains a few mixins that addresses some of
             the core issues (typography, spacing, buttons, etc).</li>
-          <li><code>vendors/</code> contains 3rd party libraries (normalize and
-              bourbon after `bower install`).</li>
+          <li><code>vendors/</code> should contain 3rd party libraries (apart from
+            normalize and bourbon, although you could move it there and edit `egg.scss`).</li>
           <li><code>partials/</code> is where you can organize code specific to
               your style (e.g. `partials/header.scss` for the header). It includes
               a few default styles from <strong>egg</strong> too (e.g. the modal).</li>

@@ -9,8 +9,7 @@
 *egg* is supposed to be a simple starting point for your styles rather than a
 dependency;
 
-1. **Dependencies**; either `bower install` to add bourbon and normalize to the
-`vendors/` folder or edit the `egg.scss` to change the import path for these dependencies.
+1. **Dependencies**; `bower install` to add bourbon and normalize (scss version) or edit the `egg.scss` to change the import path for these dependencies.
 2. **Hack**; you could simply `@import egg.scss` and override the styles, or start
 modifying the files. `partials/` is definitely fair game, `modules/` too if you
 know what you're doing.
@@ -22,4 +21,6 @@ know what you're doing.
 To build the styles for the public page (in `docs/`):
 
     cd docs
-    sass --sourcemap=none --watch styles.scss:styles.css
+    sass --sourcemap=none --style compressed --watch styles.scss:styles.css
+
+Obviously, drop the `--watch` option if you're not actively working on it.

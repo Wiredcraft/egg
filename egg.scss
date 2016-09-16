@@ -1,6 +1,6 @@
 // Loading normalize & bourbon, you could load them from somewhere else
-@import 'vendors/bourbon/app/assets/stylesheets/_bourbon';
-@import 'vendors/normalize-scss/_normalize';
+@import 'bower_components/bourbon/app/assets/stylesheets/_bourbon';
+@import 'bower_components/normalize-scss/_normalize';
 
 /*** VARIABLES (colors, layout, spacing & typography) ***/
 

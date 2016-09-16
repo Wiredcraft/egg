@@ -3,5 +3,4 @@
 !.gitmodules
 *~
 
-vendors/bourbon
-vendors/normalize-scss
+bower_components

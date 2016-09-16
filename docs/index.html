@@ -11,6 +11,11 @@
 
   <!-- CSS -->
   <link rel='stylesheet' href='styles.css'>
+
+  <!-- Code highlighter (Highlight.js) -->
+  <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/github.min.css'>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js'></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
@@ -52,18 +57,12 @@
          the available styles and illustrate how you use them:</p>
       <section class='excerpt' id='Typography'>
         <header class='header'>Typography</header>
-        <div class='body' onclick='showCode(this)'>
+        <div class='body'>
           <h1>This is a headline 1</h1>
           <h2>And a headline 2</h2>
           <h3>And finally a headline 3</h3>
           <p>This text last title is followed by a regular paragraph.</p>
         </div>
-        <script>
-          function showCode(el) {
-            el.innerHTML;
-            return;
-          }
-        </script>
       </section>
 
       <section class='excerpt' id='Buttons'>
@@ -72,16 +71,18 @@
           <p><button class='button'>Default button</button></p>
           <p><button class='button primary'>Primary button</button></p>
           <p><button class='button secondary'>Secondary button</button></p>
-          <p><span class='bundle'>
-            <button class='button'>Bundle</button><button class='button'>Of</button><button class='button'>Buttons</button>
-          </span></p>
+          <p>
+            <span class='bundle'>
+              <button class='button'>Bundle</button><button class='button'>Of</button><button class='button'>Buttons</button>
+            </span>
+          </p>
         </div>
       </section>
 
-      <section class='excerpt' id='Dropdown'>
-        <header class='header'>Drodown</header>
+      <section class='excerpt' id='Menu'>
+        <header class='header'>Menu</header>
         <div class='body'>
-          <span class='dropdown'>
+          <span class='menu'>
             <button class='button'>Dropdown menu</button>
             <div class='options'>
               <a href='#'>Profile</a>
@@ -108,17 +109,6 @@
           <p class='notification success'>Success notification</p>
           <p class='notification warning'>Warning notification</p>
           <p class='notification error'>Error notification</p>
-        </div>
-      </section>
-
-      <section class='excerpt' id='code'>
-        <header class='header'>Code</header>
-        <div class='body'>
-          <p>You can have code in a paragraph like <code>function</code>, or a
-             block of code like below:</p>
-<pre><code>function something() {
-  return 'Hello world!';
-}</code></pre>
         </div>
       </section>
 
@@ -247,6 +237,40 @@
       document.body.classList.add('modal');
       return;
     }
+    function showCode(el) {
+
+
+    }
+    var bodies = document.getElementsByClassName('body');
+    for (var i = 0; i < bodies.length; i++) {
+      var preview = document.createElement('pre');
+      var code = document.createElement('code');
+      var text = bodies[i].innerHTML;
+      // console.log(text);
+      var lines = text.split('\n');
+      lines.splice(0, 1);
+      lines.splice(lines.length - 1, 1);
+      lines = lines.map(function(str) {
+        return str.substr(10);
+      });
+      text = lines.join('\n');
+      // lines.length - 1
+      // console.log(lines);
+      var content = document.createTextNode(text);
+      preview.appendChild(code);
+      code.appendChild(content);
+      bodies[i].parentNode.insertBefore(preview, bodies[i].nextSibling);
+    }
+
+    // break the textblock into an array of lines
+
+    // remove one line, starting at the first position
+
+    // join the array back into a single string
+
+
+
   </script>
+
 </body>
 </html>

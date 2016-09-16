@@ -1042,10 +1042,27 @@ body {
       margin-bottom: 0; }
     .section .excerpt .body {
       padding: 24px; }
+    .section .excerpt code {
+      border-radius: 0 0 2px 2px;
+      border-width: 1px 0 0 0;
+      padding: 24px;
+      position: relative; }
+      .section .excerpt code:before {
+        border: 1px solid #DDDDDD;
+        border-width: 0 0 1px 1px;
+        border-radius: 0 0 0 2px;
+        content: 'Code';
+        font-family: -apple-system, "Avenir next", Avenir, Roboto, Noto, "Helvetica neue", Helvetica, Arial, Sans-serif;
+        font-size: 12px;
+        font-size: 1.2rem;
+        margin: 0 auto;
+        padding: 3px 6px 2px;
+        position: absolute;
+        right: 0;
+        text-transform: uppercase;
+        top: 0; }
     .section .excerpt#Table body {
       overflow-x: auto; }
 
 #sink {
   background: #FFF; }
-
-/*# sourceMappingURL=styles.css.map */

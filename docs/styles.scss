@@ -81,6 +81,26 @@ body {
     .body {
       padding: $space;
     }
+    code {
+      border-radius: 0 0 $radius $radius;
+      border-width: 1px 0 0 0;
+      padding: $space;
+      position: relative;
+      &:before {
+        border: 1px solid $line;
+        border-width: 0 0 1px 1px;
+        border-radius: 0 0 0 $radius;
+        content: 'Code';
+        font-family: $body;
+        @include font-size($small);
+        margin: 0 auto;
+        padding: $space/8 $space/4 $space/12;
+        position: absolute;
+        right: 0;
+        text-transform: uppercase;
+        top: 0;
+      }
+    }
     &#Table body {
       overflow-x: auto;
     }

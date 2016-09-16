@@ -6,8 +6,20 @@
 
 ## How to use?
 
-1. Clone or download the latest release.
-2. Dump it in your SCSS folder.
-3. Hack.
+*egg* is supposed to be a simple starting point for your styles rather than a
+dependency;
+
+1. **Dependencies**; either `bower install` to add bourbon and normalize to the
+`vendors/` folder or edit the `egg.scss` to change the import path for these dependencies.
+2. **Hack**; you could simply `@import egg.scss` and override the styles, or start
+modifying the files. `partials/` is definitely fair game, `modules/` too if you
+know what you're doing.
 
 **More details at http://wiredcraft.github.io/egg/#how-to/**.
+
+## /docs
+
+To build the styles for the public page (in `docs/`):
+
+    cd docs
+    sass --sourcemap=none --watch styles.scss:styles.css

@@ -1,0 +1,8 @@
+{
+  "name": "egg",
+  "version": "1.0.1",
+  "dependencies": {
+    "normalize-scss": "*",
+    "bourbon": "*"
+  }
+}

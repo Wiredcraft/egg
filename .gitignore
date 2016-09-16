@@ -3,5 +3,5 @@
 !.gitmodules
 *~
 
-node_modules/
-docs/node_modules/
+vendors/bourbon
+vendors/normalize-scss

@@ -1,10 +1,5 @@
-// Vanilla egg stuff
-@import '../main.scss';
-
-// Adding all the partials for the demo
-@import '../partials/_dropdown';
-@import '../partials/_modal';
-@import '../partials/_notifications';
+// Loading egg
+@import '../egg.scss';
 
 /* Below is the custom code for the example page */
 

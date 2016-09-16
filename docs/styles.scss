@@ -78,19 +78,20 @@ body {
         margin-bottom: 0;
       }
     }
-    .body {
+    .example {
       padding: $space;
     }
     code {
+      background: $light;
       border-radius: 0 0 $radius $radius;
       border-width: 1px 0 0 0;
       padding: $space;
       position: relative;
       &:before {
-        border: 1px solid $line;
-        border-width: 0 0 1px 1px;
+        background: $line;
         border-radius: 0 0 0 $radius;
-        content: 'Code';
+        color: #FFF;
+        content: '</>';
         font-family: $body;
         @include font-size($small);
         margin: 0 auto;

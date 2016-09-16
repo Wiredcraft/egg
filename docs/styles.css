@@ -1040,18 +1040,19 @@ body {
     .section .excerpt table:last-child,
     .section .excerpt ul:last-child {
       margin-bottom: 0; }
-    .section .excerpt .body {
+    .section .excerpt .example {
       padding: 24px; }
     .section .excerpt code {
+      background: #EEE;
       border-radius: 0 0 2px 2px;
       border-width: 1px 0 0 0;
       padding: 24px;
       position: relative; }
       .section .excerpt code:before {
-        border: 1px solid #DDDDDD;
-        border-width: 0 0 1px 1px;
+        background: #DDDDDD;
         border-radius: 0 0 0 2px;
-        content: 'Code';
+        color: #FFF;
+        content: '</>';
         font-family: -apple-system, "Avenir next", Avenir, Roboto, Noto, "Helvetica neue", Helvetica, Arial, Sans-serif;
         font-size: 12px;
         font-size: 1.2rem;

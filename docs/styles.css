@@ -1115,7 +1115,7 @@ body {
       border-width: 1px 0 0 0;
       padding: 24px;
       position: relative; }
-    .section .excerpt#Table body {
+    .section .excerpt#Table .example {
       overflow-x: auto; }
 
 #sink {

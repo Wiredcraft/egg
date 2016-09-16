@@ -17,14 +17,22 @@
   background: #FFF;
   border-radius: $radius;
   display: none;
-  margin: 4*$space auto 2*$space;
+  margin: 4*$space auto;
   max-width: 600px;
   text-align: left;
   width: 50%;
   z-index: 3000;
-  @include animation(scale 1.0s ease-in, slide 2.0s ease);
+  @include animation(slide 0.2s ease);
   @include transition-property(width);
   @include transition-duration($ease);
+  @include keyframes(slide) {
+    0% {
+      margin-top: 0;
+    }
+    100% {
+      margin-top: $space*4;
+    }
+  }
   > .header {
     border-bottom: 1px solid $line;
     border-radius: $radius $radius 0 0;

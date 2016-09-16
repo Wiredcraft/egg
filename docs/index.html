@@ -238,21 +238,19 @@
       return;
     }
 
+    // Automatically display the source code after the examples
     var examples = document.getElementsByClassName('example');
     for (var i = 0; i < examples.length; i++) {
       var preview = document.createElement('pre');
       var code = document.createElement('code');
+      // Sanitizing the code (removing extra space/lines)
       var text = examples[i].innerHTML;
-      // console.log(text);
       var lines = text.split('\n');
       lines.splice(0, 1);
       lines.splice(lines.length - 1, 1);
-      lines = lines.map(function(str) {
-        return str.substr(10);
-      });
+      lines = lines.map(function(str) { return str.substr(10); });
       text = lines.join('\n');
-      // lines.length - 1
-      // console.log(lines);
+      // Putting it all back together
       var content = document.createTextNode(text);
       preview.appendChild(code);
       code.appendChild(content);

@@ -3,32 +3,39 @@
   > *:first-child {
     cursor: pointer;
   }
-  > a,
-  .options > a {
-    color: inherit;
-    &:hover {
-      text-decoration: none;
-    }
-  }
   .options {
     background: #FFF;
-    border: 1px solid $line;
     border-radius: $radius;
-    box-shadow: $shadow;
+    box-shadow: $hover;
     box-sizing: border-box;
     min-width: 100%;
-    > * {
+    opacity: 0;
+    @include transform(scale(0.9));
+    @include transition-property(opacity, transform);
+    @include transition-duration($ease);
+    a {
       display: block;
-      padding: $space/6 $space;
+      color: inherit;
+      @include font-size($smaller);
+      padding: $space/12 $space/2;
+      margin: $space/6 0;
       white-space: nowrap;
-      @include transition-property(background);
-      @include transition-duration($ease);
       &:hover {
-        background: $light;
-      }
-      &.separated {
-        border-top: 1px solid $line;
+        background: $primary;
+        color: #FFF;
+        text-decoration: none;
       }
     }
+    hr {
+      border: 0;
+      border-top: 1px solid $line;
+      margin: $space/6 0;
+    }
+  }
+  &:hover .options,
+  &.active .options,
+  .options:hover {
+    opacity: 1;
+    @include transform(scale(1));
   }
 }

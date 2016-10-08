@@ -24,8 +24,6 @@ a {
   cursor: pointer;
   color: $blue;
   text-decoration: none;
-  @include transition-property(color);
-  @include transition-duration($ease);
   &:hover {
     color: shade($blue, 10%);
     text-decoration: underline;

@@ -11,9 +11,6 @@
   }
 }
 
-.bundle .button {
+.bundle {
   @include bundle;
-  &.secondary {
-    @include bundle;
-  }
 }

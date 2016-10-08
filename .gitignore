@@ -3,4 +3,5 @@
 !.gitmodules
 *~
 
+docs/_site
 bower_components

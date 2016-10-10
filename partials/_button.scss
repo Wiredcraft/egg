@@ -1,16 +1,21 @@
-.button {
-  @include button($light, true);
-  font-size: inherit;
-  font-weight: bold;
-  text-align: center;
-  &.primary {
-    @include button($primary);
+@if index($partials, button) {
+  .button {
+    @include button($light, true);
+    box-shadow: $shadow;
+    font-size: inherit;
+    font-weight: bold;
+    text-align: center;
+    &.primary {
+      @include button($primary);
+    }
+    &.secondary {
+      @include button($secondary);
+    }
+    &:active {
+      box-shadow: none;
+    }
   }
-  &.secondary {
-    @include button($secondary);
+  .bundle {
+    @include bundle;
   }
-}
-
-.bundle {
-  @include bundle;
 }

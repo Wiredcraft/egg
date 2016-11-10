@@ -1,9 +1,9 @@
-SCSS = docs/egg.scss docs/styles.scss
-CSS = docs/egg.css docs/styles.css
+SCSS = $(wildcard docs/**/*.scss)
+CSS = $(wildcard docs/**/*.css)
 
 .PHONY: all clean
 
-all: clean $(CSS)
+all: $(CSS)
 
 $(CSS): $(SCSS)
 	sass --sourcemap=none --style compressed $<:$@

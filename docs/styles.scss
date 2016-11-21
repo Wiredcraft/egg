@@ -7,7 +7,6 @@
 $wrapper: 700px;
 
 body {
-  background: $light;
   text-align: center;
 }
 
@@ -93,8 +92,4 @@ body {
       overflow-x: auto;
     }
   }
-}
-
-#sink {
-  background: $background;
 }

@@ -1,12 +1,14 @@
-SCSS = $(wildcard docs/**/*.scss)
-CSS = $(wildcard docs/**/*.css)
+CMD = sass -t expanded --sourcemap=none --style compressed
+WATCH = --watch
+CSS = $(wildcard docs/*.css)
 
-.PHONY: all clean
+all: clean build
 
-all: $(CSS)
+build:
+	$(CMD) docs/egg.scss:docs/egg.css docs/styles.scss:docs/styles.css
 
-$(CSS): $(SCSS)
-	sass --sourcemap=none --style compressed $<:$@
+watch:
+	$(CMD) $(WATCH) docs/egg.scss:docs/egg.css docs/styles.scss:docs/styles.css
 
 clean:
 	rm -f $(CSS)

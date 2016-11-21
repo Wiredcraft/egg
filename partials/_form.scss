@@ -18,18 +18,18 @@
   input,
   textarea,
   select {
-    box-shadow: $shadow inset;
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
   }
 
-  input:not([type=submit]),
+  input:not([type=button]):not([type=checkbox]):not([type=file]):not([type=hidden]):not([type=radio]):not([type=range]):not([type=reset]):not([type=submit]),
   textarea,
   .select select {
     background: $background;
     border: 1px solid $line;
     border-radius: $radius;
+    box-shadow: $shadow inset;
     box-sizing: border-box;
     display: block;
     padding: $space/6 $space/4;

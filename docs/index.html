@@ -32,6 +32,22 @@ version: v1.0.5
     </div>
   </header>
 
+  <section class='section' id='use'>
+    <div class='wrapper'>
+      <article class='article'>
+        <h2><a href='#how-to' id='how-to'>How do I install & use it?</a></h2>
+        <ol>
+          <li>Run <code>bower install egg-scss</code> from where you want to use it
+              (I usually rename <code>bower_components/</code> to <code>vendors/</code>).</li>
+          <li>Call egg with <code>@import 'vendors/egg/egg';</code> for example.</li>
+          <li>Override variables (colors, font sizes, spacing...). Check the <code><a href='https://github.com/Wiredcraft/egg/blob/master/_variables.scss'>_variables.scss</a></code>
+            file for more info. In particular, pay attention to the <code>$partials</code>
+            variable.</li>
+        </ol>
+      </article>
+    </div>
+  </section>
+
   <section class='section' id='about'>
     <div class='wrapper'>
       <h2><a href='#introduction' id='introduction'>What is egg?</a></h2>
@@ -196,36 +212,6 @@ version: v1.0.5
           </table>
         </div>
       </section>
-    </div>
-  </section>
-
-  <section class='section' id='use'>
-    <div class='wrapper'>
-      <article class='article'>
-        <h2><a href='#how-to' id='how-to'>How do I use it?</a></h2>
-        <p>First, you'll need to run `bower install` to add the normalize and
-           bourbon dependencies (or if you want to handle this differently, change
-           the way they're loaded in `egg.scss` for example). Then the fun starts:
-        <ul>
-          <li>Load <code>egg.css</code> (`@import egg.scss`) or use it as a starting
-              point for your styles.</li>
-          <li><code>_variables.scss</code> defines colors, font sizes, spacing &
-              typography. Enough if you just want to make a few adjustments.</li>
-          <li><code>modules/</code> contains a few mixins that addresses some of
-            the core issues (typography, spacing, buttons, etc).</li>
-          <li><code>vendors/</code> should contain 3rd party libraries (apart from
-            normalize and bourbon, although you could move it there and edit `egg.scss`).</li>
-          <li><code>partials/</code> is where you can organize code specific to
-              your style (e.g. `partials/header.scss` for the header). It includes
-              a few default styles from <strong>egg</strong> too (e.g. the modal).</li>
-        </ul>
-        <p>Simply copy the content of that folder wherever you want (for example
-           the `_scss` folder in your app).</p>
-        <p>We recommend you leave the <code>modules/</code> folder intact, however
-           the rest is fair game: change files in <code>partials/</code>, tweak
-           `_variables.scss` or choose to select includes and override styles in
-           `main.scss`, that's up to you. Go nuts!</p>
-      </article>
     </div>
   </section>
 

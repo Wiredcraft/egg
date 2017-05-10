@@ -12,8 +12,8 @@
       min-width: 100%;
       opacity: 0;
       @include transform(scale(0.9));
-      @include transition-property(opacity, transform);
-      @include transition-duration($ease);
+      transition-property: opacity, transform;
+      transition-duration: $ease;
       a {
         display: block;
         color: inherit;

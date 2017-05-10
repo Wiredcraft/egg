@@ -11,8 +11,6 @@
   display: inline-block;
   outline: none;
   padding: $space/6 $space;
-  @include transition-property(background, border, color);
-  @include transition-duration($ease);
   &:hover,
   &:focus {
     @if $clear == true {

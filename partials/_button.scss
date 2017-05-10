@@ -5,6 +5,8 @@
     font-size: inherit;
     font-weight: bold;
     text-align: center;
+    transition-property: background, border, color;
+    transition-duration: $ease;
     &.primary {
       @include button($primary);
     }

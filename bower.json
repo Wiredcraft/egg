@@ -1,5 +1,5 @@
 {
-  "name": "egg-scss",
+  "name": "egg-sass",
   "description": "A simple SASS boilerplate",
   "keywords": [ "sass", "bourbon", "css", "style"],
   "version": "v1.0.8",

@@ -1,6 +1,6 @@
 # egg
 
-*egg* is the successor to [egghsell](https://github.com/Wiredcraft/eggshell) and keeps the same overall goal; providing a SASS/Bourbon boilerplate. It was developed originally for building Web apps at [Wiredcraft](https://wiredcraft.com) (things like [devo.ps](http://devo.ps)).
+*egg* is the successor to [eggshell](https://github.com/Wiredcraft/eggshell) and keeps the same overall goal; providing a SASS/Bourbon boilerplate. It was developed originally for building Web apps at [Wiredcraft](https://wiredcraft.com) (things like [devo.ps](http://devo.ps)).
 
 **More on the official page: http://wiredcraft.github.io/egg/#about**.
 

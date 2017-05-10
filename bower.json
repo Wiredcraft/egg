@@ -2,7 +2,7 @@
   "name": "egg-scss",
   "description": "A simple SASS boilerplate",
   "keywords": [ "sass", "bourbon", "css", "style"],
-  "version": "v1.0.4",
+  "version": "v1.0.5",
   "main": [ "egg.scss" ],
   "dependencies": {
     "normalize-scss": "*",

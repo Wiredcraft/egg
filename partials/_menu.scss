@@ -11,7 +11,7 @@
       box-sizing: border-box;
       min-width: 100%;
       opacity: 0;
-      @include transform(scale(0.9));
+      transform: scale(0.9);
       transition-property: opacity, transform;
       transition-duration: $ease;
       a {
@@ -37,7 +37,7 @@
     &.active .options,
     .options:hover {
       opacity: 1;
-      @include transform(scale(1));
+      transform: scale(1);
     }
   }
 }

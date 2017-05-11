@@ -82,7 +82,7 @@
       position: absolute;
       right: $space/2;
       top: 50%;
-      @include transform(translateY(-50%));
+      transform: translateY(-50%);
     }
   }
 

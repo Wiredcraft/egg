@@ -7,8 +7,16 @@
     @media (min-width: 641px) { @content; }
   }
 
+  @else if $class == only_tablet {
+    @media (min-device-width: 641px) and (max-device-width: 1025px) { @content; }
+  }
+
   @else if $class == desktop {
     @media (min-width: 1025px) { @content; }
+  }
+
+  @else if $class == only_desktop {
+    @media (min-device-width: 1025px) and (max-device-width: 1281px) { @content; }
   }
 
   @else if $class == highres {
